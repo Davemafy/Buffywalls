@@ -1,0 +1,102 @@
+header {
+  padding: 1.5rem;
+}
+
+.app-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.app-bar .app-name {
+  margin-right: auto;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 7rem 1fr;
+  overflow-x: hidden;
+}
+
+main>section {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  padding-block: 1rem 0;
+  border-radius: 10px;
+}
+
+main .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  padding-top: 0;
+  font-size: .9rem;
+}
+
+main .wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-rows: minmax(auto, 150px);
+  overflow-x: scroll;
+  padding: .5rem 1.5rem;
+  gap: 1rem;
+}
+
+main .new-sec .wrapper {
+  grid-auto-columns: 7rem;
+  background: #aaa;
+}
+
+main .category-sec .wrapper {
+  grid-auto-columns: 9rem;
+  padding-block: 0;
+}
+
+main .trend-sec .wrapper {
+  grid-auto-columns: 10rem;
+}
+
+main .wrapper div {
+  border-radius: 1.4rem;
+  background: #777;
+  transition: 500ms ease , border 0s ;
+  overflow: hidden;
+}
+
+.expand {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0 ;
+  border: 10px solid;
+  position: absolute ;
+  opacity: 1;
+  height: calc(100% - 4rem);
+  width: 100%;
+  z-index: 1;
+}
+
+.wrapper div img{
+  width: 100%;
+  height: 100%;
+}
+
+#app footer {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  display: grid;
+
+  background: var(--bg-body);
+  border: #0024 solid;
+}
+
+#app footer section[role=navigation] {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-template-rows: 3rem;
+  
+  padding: .5rem 1.5rem;
+}

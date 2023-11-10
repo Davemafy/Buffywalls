@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/font/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+:root {
+  --cl-white: #fff;
+  --cl-light-pink: hsl(354, 92%, 67%);
+  --cl-dark: #11111;
+  --cl-light-dark: #121212;
+  --cl-lighter-dark: #242424;
+
+  --bg-body: var(--cl-white);
+  --cl-body: var(--cl-light-dark);
+  --bg-nav: var(--bg-white);
+  --cl-svg: var(--cl-dark);
+}
+
+html {
+  color-scheme: dark light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body: var(--cl-light-dark);
+    --bg-nav: var(--cl-lighter-dark);
+    --cl-body: var(--cl-white);
+    --cl-svg: var(--cl-body);
+  }
+}
+
+body {
+  background: var(--bg-body);
+  color: var(--cl-body);
+  font-family: "OpenSans" ;
+}
+
+#app_container {
+  height: 100vh;
+  display: grid;
+}
+
+#app {
+  display: grid;
+  grid-column: 1fr;
+  grid-template-rows: calc(100% - 4rem ) 4rem;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: 200ms ease;
+}
+
+#app-menu {
+  position: absolute;
+  inset-: 0;
+  z-index: 1;
+
+  height: calc(100% - 4rem);
+  width: 60%;
+  cursor: pointer;
+  
+
+  translate: -100% 0;
+  transition: 200ms ease;
+}
+
+#app #wrap_area {
+  height: 100%;
+  transition: 200ms ease;
+}
+
+#app #wrap_area {
+  display: grid;
+  height: 100%;
+  margin: auto ;
+  width: auto;
+  grid-template-rows: 4rem 1fr;
+}
+
+#app:has(.menu-btn:hover) {
+}
+
+#app:has(.menu-btn:hover) #wrap_area:hover {
+  scale: 80%;
+  translate: 50% 0%;
+  transition:
+    200ms ease
+}
+
+#app:has(.menu-btn:hover) #app-menu {
+ translate: 0 0;
+  transition:
+    200ms ease;
+}
+
+
+h3{
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+img[src=""]{
+  display: none;
+}
+
+img{
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
