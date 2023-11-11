@@ -5,4 +5,5 @@
 
 .heart{
   translate: 0 calc(-50% - 0.5rem);
+  box-shadow: 0px 0px 1rem #999 ;
 }

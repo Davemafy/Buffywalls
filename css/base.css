@@ -33,12 +33,17 @@ html {
     --cl-body: var(--cl-white);
     --cl-svg: var(--cl-body);
   }
+  button:not(.heart) img{
+    filter: invert();
+  }
 }
 
 body {
   background: var(--bg-body);
   color: var(--cl-body);
   font-family: "OpenSans" ;
+  min-height: 100vh;
+  
 }
 
 #app_container {
@@ -60,10 +65,10 @@ body {
 #app-menu {
   position: absolute;
   inset-: 0;
-  z-index: 1;
 
   height: calc(100% - 4rem);
   width: 60%;
+  background: #ddd;
   cursor: pointer;
   
 
