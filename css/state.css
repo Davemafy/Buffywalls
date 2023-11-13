@@ -1,0 +1,10 @@
+#wall:hover{
+  scale: 1.3;
+}
+
+.wrapper div{
+  transition: 500ms ease 
+}
+.wrapper div.scroll{
+  translate: -50% 0;
+}

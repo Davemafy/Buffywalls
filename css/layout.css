@@ -1,4 +1,4 @@
-.hide{
+.hide {
   display: none;
 }
 
@@ -41,28 +41,47 @@ main .wrapper {
   display: grid;
   grid-auto-flow: column;
   grid-auto-rows: minmax(auto, 150px);
-  overflow-x: scroll;
+  overflow-x: auto;
   padding: .5rem 1.5rem;
   gap: 1rem;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1.5rem;
+}
+
+main .wrapper > * {
+  scroll-snap-align: start;
 }
 
 main .new-sec .wrapper {
   grid-auto-columns: 7rem;
-  animation: load 1000ms infinite linear;
 }
 
-main .new-sec .wrapper:has(.loading) {
-  background: #aaa;
+
+body.loading .wrapper div {
   grid-auto-columns: 7rem;
 }
-main .new-sec .wrapper:has(.loading) *{
-  display: none;
-}
-main .new-sec .wrapper:has(.loaded){
-  animation: none;
+
+@media screen and (min-width: 600px) {
+  main {
+    grid-template-rows: 3fr 8rem 2fr;
+  }
+
+  main .new-sec .wrapper {
+    border: solid darkred;
+    grid-auto-rows: 100px;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    max-height: 100%;
+    overflow-y: hidden;
+  }
 }
 
-main .new-sec .wrapper:has(.loaded) .loader{
+
+main .new-sec .wrapper:has(.loaded) {}
+
+main .new-sec .wrapper:has(.loaded) .loader {
   display: none;
 }
 
@@ -77,61 +96,82 @@ main .trend-sec .wrapper {
 
 main .wrapper div {
   border-radius: 1.4rem;
-  background: #777;
-  transition: 500ms 400ms ease , border 0s ;
   overflow: hidden;
-  animation: load 1000ms infinite linear;
+  position: relative;
 }
 
-main .wrapper div:has(.loaded){
-  animation: none;
+body.loaded .wrapper div {
+  display: grid;
+  place-items: center;
 }
 
+body.loaded .wrapper .spinner,
+main .wrapper:has(.loaded) #wall-bg {
+  display: none;
+}
 
-@keyframes load{
-  0%, 100%{
-    opacity: 0.1;
+@keyframes load {
+
+  0%,
+  100% {
+    opacity: 0.08;
   }
-  50%{
-    opacity: 0.2;
+
+  35%,
+  75% {
+    opacity: 0.05;
   }
 }
-
-
 
 .expand {
+  translate: 50%;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0 ;
-  border: 10px solid;
-  position: absolute ;
+  right: 0;
   opacity: 1;
-  height: calc(100% - 4rem);
+  height: calc(50% - 4rem);
   width: 100%;
   z-index: 1;
 }
 
-.wrapper div img{
+.wrapper div img:not(.spinner) {
   width: 100%;
   height: 100%;
-  transition: 500ms ease ;
+  position: absolute;
 }
 
-.wrapper div img.loading{
+@keyframes opacity {
+  0% {
     opacity: 0;
-    border-radius: inherit ;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
+body.loaded div #wall {
+  opacity: 1;
+  animation: none;
+}
+
+body.loaded .wrapper img:not(.spinner) {
+  scale: 1;
+  border-radius: inherit;
+}
+
 
 #app footer {
   position: fixed;
   bottom: 0;
 
   width: 100%;
+  max-width: 700px;
   display: grid;
 
   background: var(--bg-body);
-/*  border: #0024 solid; */
+  /*  border: #0024 solid; */
 }
 
 #app footer section[role=navigation] {
@@ -139,13 +179,12 @@ main .wrapper div:has(.loaded){
   gap: 1rem;
   grid-auto-flow: column;
   grid-template-rows: 3rem;
-  
+
   padding: .5rem 1.5rem;
 }
 
-#app  button {
+#app button {
   border: 0;
   background: transparent;
-  border-radius: 50%;
+  border-radius: 2rem;
 }
-
