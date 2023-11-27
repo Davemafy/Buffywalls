@@ -70,8 +70,8 @@ function spinner(amount) {
   let divWrap = '';
 ;  for (var i = 0; i < amount; i++) {
     let id = random(random(29))
-    divWrap += `<li style="background: url('/preload/pre${id}.jpg'); background-position: center;background-repeat: no-repeat!important;background-size: cover;">
-                    <img id="wall"  src="/thumbnails/wall${id}-min.jpg" loading="lazy" alt="">
+    divWrap += `<li style="background: #1112; background-position: center;background-repeat: no-repeat!important;background-size: cover;">
+                    <img id="wall"  src="https://source.unsplash.com/random/${id}x${id}" loading="lazy" alt="">
                   </li>
                `
   }
