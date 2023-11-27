@@ -1,17 +1,17 @@
-let imgWrapper = document.body.querySelectorAll('.wrapper');
+let imgWrapper = document.body.querySelectorAll('#track');
 
-let limit = 12;
+let limit = 25;
 let renderLimit = 25;
 const arr = []
 
-preload()
+preload(limit)
 window.addEventListener('load', (e) => {
   e.preventDefault()
   render()
 })
 
-function preload() {
-  imgWrapper.forEach(wrapper => wrapper.innerHTML = spinner(12))
+function preload(limit) {
+  imgWrapper.forEach(wrapper => wrapper.innerHTML = spinner(limit))
 }
 
 function render() {
@@ -70,9 +70,9 @@ function spinner(amount) {
   let divWrap = '';
 ;  for (var i = 0; i < amount; i++) {
     let id = random(random(29))
-    divWrap += `<div style="background: url('/preload/pre${id}.jpg'); background-position: center;background-repeat: no-repeat!important;background-size: cover;">
-                    <img id="wall" style="object-fit: cover;" src="/thumbnails/wall${id}-min.jpg" loading="lazy" alt="">
-                  </div>
+    divWrap += `<li style="background: url('/preload/pre${id}.jpg'); background-position: center;background-repeat: no-repeat!important;background-size: cover;">
+                    <img id="wall"  src="/thumbnails/wall${id}-min.jpg" loading="lazy" alt="">
+                  </li>
                `
   }
   return divWrap;

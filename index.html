@@ -1,103 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML</title>
-  <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/module.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/state.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/main.css">
+	<title>BuffyWalls</title>
 </head>
+<body class="loading h-screen h-[100svh] dark:bg-ligtDark dark:text-wite">
+	<!-- App Container -->
+	<div class="relative border-0 overflow-hidden h-full w-full mx-auto grid h-[calc(100svh_-_4rem)] " id="app">
 
-<body class="loading">
-  <section id="app_container">
-    <div id="app">
-      <section id="update_area">
-        <nav id="app-menu">
-          <!-- coming soon -->
-        </nav>
-        <section id="wrap_area">
-          <header id="header">
-            <nav class="app-bar">
-              <h1 class="app-name">
-                BuffyWalls
-              </h1>
-              <button class="menu-btn">
-                <img src="/icons/menu-deep.svg" alt="menu">
-              </button>
-              <button class="logo">
-                <img src="/icons/infinity.svg" alt="app-logo">
-              </button>
-            </nav>
-          </header>
-          <main id="main">
-            <section class="new-sec">
-              <div class="top">
-                <h3 class="tag-new">Newest</h3>
-                <h3 class="tag-all">All</h3>
-              </div>
-              <section class="wrapper">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-              </section>
-            </section>
-            <section class="category-sec">
-              <div class="top">
-                <h3 class="tag-title">
-                  Categories
-                </h3>
-              </div>
-              <section class="wrapper">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </section>
-            </section>
-            <section class="trend-sec">
-              <div class="top">
-                <h3 class="tag-title">
-                  Trending Now
-                </h3>
-              </div>
-              <section class="wrapper">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </section>
-            </section>
-          </main>
-        </section>
-      </section>
-      <footer>
-        <section role="navigation">
-          <button id="">
-            <img src="/icons/home-2.svg" alt="">
-          </button>
-          <button id="">
-            <img src="/icons/carousel-horizontal-filled.svg" alt="">
-          </button>
-          <button class="heart" id="">
-            <img src="/icons/heart.svg" alt="">
-          </button>
-          <button id="">
-            <img src="/icons/layout-grid.svg" alt="">
-          </button>
-          <button id="">
-            <img src="/icons/menu-2.svg" alt="">
-          </button>
-        </section>
-      </footer>
-    </div>
-  </section>
-  <script src="./js/load.js"></script>
-  <script src="./js/main.js" defer></script>
+		<!-- Sidebar  -->
+		<aside class="absolute overflow-auto h-[calc(100%_-_5rem)] w-2/3 top-0 left-0" id="menu">
+
+			<header class=" py-6 flex border-b justify-between h-40 ">
+				<a class="rounded-full aspect-square bg-indigo-900" href="#">
+					<img src="" alt="">
+				</a>
+				<button id="back">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000"><g data-name="Layer 2"><g data-name="arrow-ios-back"><rect width="24" height="24" transform="rotate(90 12 12)" opacity="0" /><path d="M13.83 19a1 1 0 0 1-.78-.37l-4.83-6a1 1 0 0 1 0-1.27l5-6a1 1 0 0 1 1.54 1.28L10.29 12l4.32 5.36a1 1 0 0 1-.78 1.64z" /></g></g></svg>
+				</button>
+			</header>
+			<ul class="  grid auto-rows-[minmax(3.5rem,_1fr)] text-left border-0" 5rem>
+				<li class="" data-locked="false">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z" stroke-width="0" fill="currentColor" />
+					</svg>
+					<p>
+						Dark Mode
+					</p>
+					<input type="radio">
+				</li>
+				<li class="" data-locked="true">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M12 8a4 4 0 1 1 -3.995 4.2l-.005 -.2l.005 -.2a4 4 0 0 1 3.995 -3.8z" stroke-width="0" fill="currentColor" />
+						<path d="M12 4a1 1 0 0 1 .993 .883l.007 .127a1 1 0 0 1 -1.993 .117l-.007 -.127a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+						<path d="M17 6a1 1 0 0 1 .993 .883l.007 .127a1 1 0 0 1 -1.993 .117l-.007 -.127a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+						<path d="M19 11a1 1 0 0 1 .993 .883l.007 .127a1 1 0 0 1 -1.993 .117l-.007 -.127a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+						<path d="M17 16a1 1 0 0 1 .993 .883l.007 .127a1 1 0 0 1 -1.993 .117l-.007 -.127a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+						<path d="M12 18a1 1 0 0 1 .993 .883l.007 .127a1 1 0 0 1 -1.993 .117l-.007 -.127a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+						<path d="M7 16a1 1 0 0 1 .993 .883l.007 .127a1 1 0 0 1 -1.993 .117l-.007 -.127a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+						<path d="M5 11a1 1 0 0 1 .993 .883l.007 .127a1 1 0 0 1 -1.993 .117l-.007 -.127a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+						<path d="M7 6a1 1 0 0 1 .993 .883l.007 .127a1 1 0 0 1 -1.993 .117l-.007 -.127a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+					</svg>
+					<p>
+						Amoled
+					</p>
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" />
+						<path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+						<path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+					</svg>			</li>
+				<li class="" data-locked="true">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000"><g data-name="Layer 2"><g data-name="pantone"><rect width="24" height="24" opacity="0" /><path d="M20 13.18h-2.7l-1.86 2L11.88 19l-1.41 1.52L10 21h10a1 1 0 0 0 1-1v-5.82a1 1 0 0 0-1-1z" /><path d="M18.19 9.3l-4.14-3.86a.89.89 0 0 0-.71-.26 1 1 0 0 0-.7.31l-.82.89v10.71a5.23 5.23 0 0 1-.06.57l6.48-6.95a1 1 0 0 0-.05-1.41z" /><path d="M10.82 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v13.09a3.91 3.91 0 0 0 7.82 0zm-2 13.09a1.91 1.91 0 0 1-3.82 0V15h3.82zm0-4.09H5v-3h3.82zm0-5H5V5h3.82z" /></g></g></svg>
+					<p>
+						Accent Color
+					</p>
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" />
+						<path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+						<path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+					</svg>			</li>
+				<li class="" data-locked="false">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M20 6a1 1 0 0 1 .117 1.993l-.117 .007h-.081l-.919 11a3 3 0 0 1 -2.824 2.995l-.176 .005h-8c-1.598 0 -2.904 -1.249 -2.992 -2.75l-.005 -.167l-.923 -11.083h-.08a1 1 0 0 1 -.117 -1.993l.117 -.007h16z" stroke-width="0" fill="currentColor" />
+						<path d="M14 2a2 2 0 0 1 2 2a1 1 0 0 1 -1.993 .117l-.007 -.117h-4l-.007 .117a1 1 0 0 1 -1.993 -.117a2 2 0 0 1 1.85 -1.995l.15 -.005h4z" stroke-width="0" fill="currentColor" />
+					</svg>
+
+
+					<p>
+						Clear Cache
+					</p>
+					<img src="" alt="-icon">
+				</li>
+				<li class="" data-locked="false">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+						<path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+						<path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+						<path d="M8.7 10.7l6.6 -3.4" />
+						<path d="M8.7 13.3l6.6 3.4" />
+					</svg>
+
+
+					<p>
+						Share App
+					</p>
+					<img src="" alt="-icon">
+				</li>
+				<li class="" data-locked="false">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-thumb-up-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M13 3a3 3 0 0 1 2.995 2.824l.005 .176v4h2a3 3 0 0 1 2.98 2.65l.015 .174l.005 .176l-.02 .196l-1.006 5.032c-.381 1.626 -1.502 2.796 -2.81 2.78l-.164 -.008h-8a1 1 0 0 1 -.993 -.883l-.007 -.117l.001 -9.536a1 1 0 0 1 .5 -.865a2.998 2.998 0 0 0 1.492 -2.397l.007 -.202v-1a3 3 0 0 1 3 -3z" stroke-width="0" fill="currentColor" />
+						<path d="M5 10a1 1 0 0 1 .993 .883l.007 .117v9a1 1 0 0 1 -.883 .993l-.117 .007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-7a2 2 0 0 1 1.85 -1.995l.15 -.005h1z" stroke-width="0" fill="currentColor" />
+					</svg>
+					<p>
+						Rate App
+					</p>
+					<img src="" alt="">
+				</li>
+				<li class="" data-locked="false">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bolt" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
+					</svg>				<p>
+						Other Apps
+					</p>
+					<img src="" alt="">
+				</li>
+				<li class="" data-locked="false">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-wink-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" />
+						<path d="M9 10h-.01" />
+						<path d="M14.5 15a3.5 3.5 0 0 1 -5 0" />
+						<path d="M15.5 8.5l-1.5 1.5l1.5 1.5" />
+					</svg>				<p>
+						About Us
+					</p>
+					<img src="" alt="-icon">
+				</li>
+				<li class="" data-locked="false">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M17 17h-11v-14h-2" />
+						<path d="M6 5l14 1l-1 7h-13" />
+					</svg>		
+					<p>
+						Go PRO
+					</p>
+					<img src="" alt="-icon">
+				</li>
+			</ul>
+			<footer class="h-8  relative ">
+				<p class="text-sm absolute p-2 pr-16 bottom-0 right-0">
+					Version 1.0.1
+				</p>
+			</footer>
+		</aside>
+
+		<!-- Animation Container -->
+		<section class="  border-0 border-green-500 overflow-hidden h-[calc(100svh_-_4rem)] grid  pt-2 gap-1.5  " id="scaler">
+			<!-- Header Container -->
+			<header class="flex row-span-1 justify-center items-center p-5 pl-6 ">
+				<!-- Nav Container -->
+				<nav class=" flex items-center w-full  lg-w-2xl gap-0">
+					<h1 class="font-bold app-name">BuffyWalls</h1>
+					<button class="nav-btn ml-auto aspect-square hover:drop-shadow-xl " id="menu-btn">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-deep" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<path d="M4 6h16" />
+							<path d="M7 12h13" />
+							<path d="M10 18h10" />
+						</svg>
+					</button>
+					<button class="nav-btn aspect-square">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+						</svg>
+					</button>
+				</nav>
+			</header>
+			<!-- Main Content Container -->
+			<main class="  border-0 border-red-600">
+				<div class="" id="page1">
+					<section class=" grid grid-cols-1  content-start h-[calc((100%_/_2.55))] md:min-h-[calc(11.5rem)] p-0" id="newest-sec">
+						<div class="flex  h-fit justify-between p-2 px-6 font-semibold">
+							<h2>Newest</h2>
+							<h2>All</h2>
+						</div>
+						<div class="container">
+							<div class="container overflow-hidden">
+								<ul class=" w-full items-center overflow-hidden overflow-x-auto  grid grid-flow-col auto-cols-[6.5rem] h-max gap-4 p-4 px-6 " id="track">
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section class="grid grid-cols-1 content-start h-1/4 h-[calc((100%_/_4))] md:min-h-[calc(3rem)] ]" id="category-sec">
+						<div class="flex h-fit justify-between p-1 px-6 font-semibold">
+							<h2>Categories</h2>
+						</div>p
+						<div class="container">
+							<div class="container overflow-hidden">
+								<ul class="w-full items-center overflow-hidden overflow-x-auto  grid grid-flow-col auto-cols-[8rem] h-max gap-4 p-4 px-6 " id="track">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section class=" grid grid-cols-1 content-start h-[calc((100%_/_2.86))] min-h-[8rem] h-[calc((100%_/_2.55))] md:min-h-[calc(11.5rem)]  " id="trending-sec">
+						<div class="flex h-fit justify-between p-1 px-6 font-semibold">
+							<h2>Trending</h2>
+						</div>
+						<div class="container">
+							<div class="container overflow-hidden">
+								<ul class="w-full items-center overflow-hidden overflow-x-auto  grid grid-flow-col auto-cols-[9rem] h-max gap-4 p-4 px-6 " id="track">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</main>
+		</section>
+		<!-- Footer  -->
+		<footer class=" fixed bottom-0 container h-16">
+			<!-- Nav Container -->
+			<nav class="flex h-full p-2 px-6">
+				<ul class="flex justify-between h-full w-full">
+					<li>
+						<button class="nav-btn">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+								<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+								<path d="M10 12h4v4h-4z" />
+							</svg>
+						</button>
+					</li>
+					<li>
+						<button class="nav-btn">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-carousel-horizontal-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M16 4h-8a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
+								<path d="M22 6a1 1 0 0 1 .117 1.993l-.117 .007h-1v8h1a1 1 0 0 1 .117 1.993l-.117 .007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-8a2 2 0 0 1 1.85 -1.995l.15 -.005h1z" stroke-width="0" fill="currentColor" />
+								<path d="M3 6a2 2 0 0 1 1.995 1.85l.005 .15v8a2 2 0 0 1 -1.85 1.995l-.15 .005h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1v-8h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" stroke-width="0" fill="currentColor" />
+							</svg>
+						</button>
+					</li>
+					<li>
+						<button class="nav-btn translate-y-[calc(-50%_-_.5rem)] rounded-full heart" data-locked="true">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#F85D6D" fill="#F85D6D" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+							</svg>
+						</button>
+					</li>
+					<li>
+						<button class="nav-btn">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-grid" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+							</svg>
+						</button>
+					</li>
+					<li>
+						<button class="nav-btn">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M4 6l16 0" />
+								<path d="M4 12l16 0" />
+								<path d="M4 18l16 0" />
+							</svg>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+
+	<script src="js/load.js" defer></script>
+	<script src="js/script.js" defer></script>
 </body>
-
 </html>
