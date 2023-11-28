@@ -3,7 +3,7 @@ const navMenu = document.getElementById('menu')
 const navMenuBack = document.getElementById('back')
 const walls = document.querySelectorAll('.wall')
 
-setTimeout(openMenu, 100)
+//setTimeout(openMenu, 100)
 
 btn.addEventListener('click', openMenu)
 navMenuBack.addEventListener('click', closeMenu)

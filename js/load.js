@@ -69,10 +69,10 @@ function random(num) {
 function spinner(amount) {
   let divWrap = '';
 ;  for (var i = 0; i < amount; i++) {
-  let id = random(10000)
-  divWrap += `<div style="/*background: url('/preload/pre${id}.jpg')*/; background-position: center;background-repeat: no-repeat!important;background-size: cover;">
-                  <img id="wall" style="object-fit: cover;" src="https://source.unsplash.com/random?photos?${id}*${id}" loading="lazy" alt="">
-                </div>`
+  let id = random(29)
+  divWrap += `<li style="background: url('/preload/pre${id}.jpg'); background-position: center;background-repeat: no-repeat!important;background-size: cover;">
+                  <img id="wall" style="object-fit: cover;" src="thumbnails/wall${id}-min.jpg" loading="lazy" alt="">
+                </li>`
   }
   return divWrap;
 }
