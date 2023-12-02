@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+    .heart {
+        @apply w-[3rem] mx-auto bg-white shadow-[0px_0px_1rem_#999] ;
+    }
     .app-name {
         @apply text-lightPink text-[1.45rem];
     }
@@ -16,19 +19,10 @@
     #menu svg,
     #menu ul li img {
         @apply h-10 w-10;
-        border: solid rd;
-    }
-    #category-sec .img-wrapper {
-        @apply;
-    }
-    #trending-sec .img-wrapper {
-        @apply;
+        
     }
     .nav-btn {
         @apply w-12 aspect-square grid place-items-center;
-    }
-    .heart {
-        @apply w-[3rem] mx-auto bg-white shadow-[0px_0px_1rem_#999] dark:bg-white aspect-square;
     }
 }
 
@@ -89,6 +83,7 @@ body.loading #track li {
 
 #app main > section {
     display: grid;
+    gap: .5rem ;
 
     grid-template-rows:
         minmax(min(100%, 4rem), 1.1fr) minmax(0rem, max(15vh, 7rem))
@@ -99,7 +94,7 @@ body.loading #track li {
 #category-sec,
 #trending-sec {
     display: grid;
-    background: pink;
+    
     grid-template-rows: min-content 1fr;
 }
 
@@ -112,13 +107,18 @@ body.loading #track li {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc(100% / 3);
-    padding: 0.15rem 1rem ;
+    padding: 0.15rem 1.5rem ;
     overflow-x: scroll;
     gap: 1rem;
 }
 
 #category-sec #img-track {
+	padding-block: .3rem;
 	grid-auto-columns: calc(100% / 2.4);
+}
+
+#trending-sec #img-track {
+	grid-auto-columns: calc(100% / 1.8);
 }
 
 #app #img-track >div{
@@ -130,9 +130,9 @@ body.loading #track li {
 
     height: calc(100% - 6rem);
     width: 60%;
-    background: #fff;
+    
     margin-top: 2rem;
-    padding-inline: 1rem 0;
+    padding-inline: .5rem 0;
 
     translate: -100% 0%;
     transition: 200ms ease;
@@ -192,4 +192,9 @@ img[src=""] {
 .hide {
     opacity: 1;
     scale: 0.6;
+}
+
+*:not(#img-track div){
+	border: 0!important;
+	
 }

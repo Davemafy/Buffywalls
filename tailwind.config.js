@@ -14,7 +14,6 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				'white': '#fff',
 				'lightPink': 'hsl(354, 92%, 67%)',
 				'dark': '#111111',
 				'lightDark': '#121212',

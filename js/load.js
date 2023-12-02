@@ -1,4 +1,4 @@
-let imgWrapper = document.body.querySelectorAll('#track');
+let imgWrapper = document.body.querySelectorAll('#img-track');
 
 let limit = 25;
 let renderLimit = 25;
@@ -70,9 +70,9 @@ function spinner(amount) {
   let divWrap = '';
 ;  for (var i = 0; i < amount; i++) {
   let id = random(29)
-  divWrap += `<li style="background: url('/preload/pre${id}.jpg'); background-position: center;background-repeat: no-repeat!important;background-size: cover;">
-                  <img id="wall" style="object-fit: cover;" src="thumbnails/wall${id}-min.jpg" loading="lazy" alt="">
-                </li>`
+  divWrap += `<div class="bg-lighterDark rounded-xl" style="background: url('/preload/pre${id}.jpg'); background-position: center;background-repeat: no-repeat!important;background-size: cover;">
+                  <img id="wall"  src="thumbnails/wall${id}-min.jpg" loading="lazy" alt="">
+                </div>`
   }
   return divWrap;
 }
