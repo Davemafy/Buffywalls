@@ -869,17 +869,40 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border-0 {
   border-width: 0px;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .border-b {
   border-bottom-width: 1px;
 }
 
+.border-amber-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 211 77 / var(--tw-border-opacity));
+}
+
+.border-blue-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
+}
+
 .border-green-500 {
   --tw-border-opacity: 1;
   border-color: rgb(34 197 94 / var(--tw-border-opacity));
+}
+
+.border-lightPink {
+  --tw-border-opacity: 1;
+  border-color: hsl(354 92% 67% / var(--tw-border-opacity));
 }
 
 .border-red-600 {
@@ -897,9 +920,24 @@ video {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
+.bg-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+}
+
+.bg-fuchsia-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 232 255 / var(--tw-bg-opacity));
+}
+
 .bg-indigo-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(49 46 129 / var(--tw-bg-opacity));
+}
+
+.bg-lighterDark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 36 36 / var(--tw-bg-opacity));
 }
 
 .p-0 {
@@ -1028,6 +1066,7 @@ body {
   background-repeat: no-repeat;
   background-size: 800px;
   background-position: 90% -25%;
+  height: 100dvh!important;
 }
 
 #track img {
@@ -1059,11 +1098,36 @@ body.loading #track li {
 
 #app {
   display: grid;
-  grid-column: 1fr;
   grid-template-rows: calc(100% - 4rem) 4rem;
   position: relative;
   overflow: hidden;
   transition: 200ms ease;
+}
+
+#app main {
+  display: grid;
+  grid-template-rows: 4rem calc(100% - 4rem);
+}
+
+#app main > section {
+  display: grid;
+  grid-template-rows: minmax(min(100%, 4rem), 1.1fr) minmax(
+            0rem,
+            max(15vh, 7rem)
+        ) minmax(0rem, 1.1fr);
+}
+
+#app main > section > div {
+  display: grid;
+}
+
+#app main #img-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(100% / 3) ;
+  padding: 1rem ;
+  overflow-x: scroll;
+  gap: 1rem;
 }
 
 #menu {
@@ -1078,7 +1142,6 @@ body.loading #track li {
 }
 
 #app #scaler {
-  grid-template-rows: 4rem 1fr;
   transition: 200ms ease;
 }
 
