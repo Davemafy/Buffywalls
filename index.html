@@ -14,8 +14,12 @@
         <div class="bg-dark" id="app">
             <main class="grid border-2 border-amber-300">
                 <header class="bg-fuchsia-100"></header>
-                <section class="" id="content">
+                <section class=" font-semibold" id="content">
                     <div class="border-2 border-blue-600" id="newest-sec">
+                        <div class="track-title flex justify-between p-4 py-2">
+														<button>Newest</button>
+                            <button>All</button>
+                        </div>
                         <div id="img-track">
                             <div class="bg-lighterDark rounded-xl"></div>
                             <div class="bg-lighterDark rounded-xl"></div>
@@ -28,7 +32,10 @@
                         </div>
                     </div>
                     <div class="border-2 border-blue-600" id="category-sec">
-                        <div id="img-track">
+                          <div class="track-title flex justify-between p-4 py-2">
+														<button>Category</button>
+                       </div>
+                       <div id="img-track">
                             <div class="bg-lighterDark rounded-xl"></div>
                             <div class="bg-lighterDark rounded-xl"></div>
                             <div class="bg-lighterDark rounded-xl"></div>
@@ -40,7 +47,10 @@
                         </div>
                     </div>
                     <div class="border-2 border-blue-600" id="trending-sec">
-                        <div id="img-track">
+                           <div class="track-title flex justify-between p-4 py-2">
+														<button>Trending</button>
+                        </div>
+                      <div id="img-track">
                             <div class="bg-lighterDark rounded-xl"></div>
                             <div class="bg-lighterDark rounded-xl"></div>
                             <div class="bg-lighterDark rounded-xl"></div>
@@ -51,67 +61,10 @@
                             <div class="bg-lighterDark rounded-xl"></div>
                         </div>
                     </div>
-               </section>
+                </section>
             </main>
-            		<footer class=" fixed bottom-0 container h-16">
-			<!-- Nav Container -->
-			<nav class="flex h-full p-2 px-6">
-				<ul class="flex justify-between h-full w-full">
-					<li>
-						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-								<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-								<path d="M10 12h4v4h-4z" />
-							</svg>
-						</button>
-					</li>
-					<li>
-						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-carousel-horizontal-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M16 4h-8a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
-								<path d="M22 6a1 1 0 0 1 .117 1.993l-.117 .007h-1v8h1a1 1 0 0 1 .117 1.993l-.117 .007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-8a2 2 0 0 1 1.85 -1.995l.15 -.005h1z" stroke-width="0" fill="currentColor" />
-								<path d="M3 6a2 2 0 0 1 1.995 1.85l.005 .15v8a2 2 0 0 1 -1.85 1.995l-.15 .005h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1v-8h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" stroke-width="0" fill="currentColor" />
-							</svg>
-						</button>
-					</li>
-					<li>
-						<button class="nav-btn translate-y-[calc(-50%_-_.5rem)] rounded-full heart" data-locked="true">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#F85D6D" fill="#F85D6D" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-							</svg>
-						</button>
-					</li>
-					<li>
-						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-grid" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-								<path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-								<path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-								<path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-							</svg>
-						</button>
-					</li>
-					<li>
-						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M4 6l16 0" />
-								<path d="M4 12l16 0" />
-								<path d="M4 18l16 0" />
-							</svg>
-						</button>
-					</li>
-				</ul>
-			</nav>
-		</footer>
-	</div>
-
         </div>
+
         <script type="module" src="js/load.js" defer></script>
         <script type="module" src="js/script.js" defer></script>
     </body>
