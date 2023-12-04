@@ -38,7 +38,7 @@ function showModal(target, text) {
 function makeModal(src, text, target) {
     if (src) {
         modalImg.setAttribute("src", src);
-        modalImg.parentElement.style.display = "block";
+        modalImg.parentElement.style.display = "auto";
     } else {
         modalImg.parentElement.style.display = "none";
     }
