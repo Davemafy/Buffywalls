@@ -4,7 +4,7 @@
 
 @layer components {
     .heart {
-        @apply w-[3rem] mx-auto bg-white shadow-[0px_0px_1rem_#999];
+        @apply w-[3rem] mx-auto bg-white  shadow-[0px_0px_1rem_#999] ;
     }
     .app-name {
         @apply font-bold  text-lightPink text-[1.45rem];
@@ -98,7 +98,7 @@ body.loading #track div {
 
 body:has(#modal.show) #app :is(aside, main, footer ){
 	transition: 200ms ease;
-	scale: 1.12;
+	scale: 1.06;
 }
 
 #app main {
@@ -279,6 +279,7 @@ main .img-track{
     transition: 200ms ease;
 }
 
+
 #app:has(.open) #menu {
     translate: 0 0;
     transition: 200ms ease;
@@ -309,8 +310,9 @@ main .img-track{
     opacity: 1;
 }
 
-#track div {
-    transition: 500ms ease;
+
+.modal .overlay {
+	background: linear-gradient(#0001, #0001 ,#0003 , #0009);
 }
 
 img {
@@ -328,7 +330,7 @@ img[src=""] {
     scale: 0.6;
 }
 
-*:not(.img-track  div) {
+*:not(.img-track  div, #favBtn ) {
     
     border: 0 !important;
 }

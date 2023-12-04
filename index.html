@@ -10,7 +10,7 @@
   <link rel="icon" href="icon.png" type="image/icon type" />
 </head>
 
-<body class="loading relative overflow-hidden h-screen w-screen border-2 border-lightPink grid dark:bg-ligtDark dark:text-wite">
+<body class="loading relative overflow-hidden h-screen w-screen border-2 border-lightPink grid drk:bg-lightDark drk:text-white">
 
   <div class="" id="app">
    <aside class="absolute overflow-auto  h-[calc(100%_-_5rem)] w-2/3 top-0 left-0" id="menu">
@@ -19,7 +19,7 @@
         <a class="rounded-full aspect-square bg-indigo-900" href="#">
         </a>
         <button id="back">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <g data-name="Layer 2">
               <g data-name="arrow-ios-back">
                 <rect width="24" height="24" transform="rotate(90 12 12)" opacity="0" />
@@ -63,7 +63,7 @@
 						<path d="M8 11v-4a4 4 0 1 1 8 0v4" />
 					</svg>			</li>
 				<li class="" data-locked="true">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000"><g data-name="Layer 2"><g data-name="pantone"><rect width="24" height="24" opacity="0" /><path d="M20 13.18h-2.7l-1.86 2L11.88 19l-1.41 1.52L10 21h10a1 1 0 0 0 1-1v-5.82a1 1 0 0 0-1-1z" /><path d="M18.19 9.3l-4.14-3.86a.89.89 0 0 0-.71-.26 1 1 0 0 0-.7.31l-.82.89v10.71a5.23 5.23 0 0 1-.06.57l6.48-6.95a1 1 0 0 0-.05-1.41z" /><path d="M10.82 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v13.09a3.91 3.91 0 0 0 7.82 0zm-2 13.09a1.91 1.91 0 0 1-3.82 0V15h3.82zm0-4.09H5v-3h3.82zm0-5H5V5h3.82z" /></g></g></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><g data-name="Layer 2"><g data-name="pantone"><rect width="24" height="24" opacity="0" /><path d="M20 13.18h-2.7l-1.86 2L11.88 19l-1.41 1.52L10 21h10a1 1 0 0 0 1-1v-5.82a1 1 0 0 0-1-1z" /><path d="M18.19 9.3l-4.14-3.86a.89.89 0 0 0-.71-.26 1 1 0 0 0-.7.31l-.82.89v10.71a5.23 5.23 0 0 1-.06.57l6.48-6.95a1 1 0 0 0-.05-1.41z" /><path d="M10.82 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v13.09a3.91 3.91 0 0 0 7.82 0zm-2 13.09a1.91 1.91 0 0 1-3.82 0V15h3.82zm0-4.09H5v-3h3.82zm0-5H5V5h3.82z" /></g></g></svg>
 					<p>
 						Accent Color
 					</p>
@@ -156,34 +156,56 @@
     </aside>
   <!-- Modal -->
    <div class="modal overflow-y-auto  border  border-lightPink px-3 transition-transform duration-[75ms] " id="modal" >
-      <header class="flex relative mb-2  items-center  justify-center p-2 px-6 ">
+      <header class="flex relative mb-2 drk:bg-lightDark  items-center  justify-center p-2 px-6 ">
         <button class=" w-8 left-0 absolute" id="closeModal">
 						<svg xmlns="http://www.w3.org/2000/svg" class="fill-lightPink" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-ios-back"><rect width="24" height="24" transform="rotate(90 12 12)" opacity="0"/><path d="M13.83 19a1 1 0 0 1-.78-.37l-4.83-6a1 1 0 0 1 0-1.27l5-6a1 1 0 0 1 1.54 1.28L10.29 12l4.32 5.36a1 1 0 0 1-.78 1.64z"/></g></g></svg>
         </button>
-        <h2 class="app-name ">Category</h2>
+        <h2 class="app-name " id="modalTitle">Category</h2>
       </header>
       
-      <section class="overflow-hidden rounded-3xl aspect-square overflow-hidden" id="currentImgWrapper">
+      <section class="overflow-hidden relative rounded-3xl  aspect-square overflow-hidden" id="currentImgWrapper">
         <img class="" src="thumbnails/wall13-min.jpg" id="modalImg" alt="">
+        <section class="flex bg-lightDark overlay justify-center gap-4 items-end absolute inset-0 pb-8" id="socials">
+        	<button class="bg-white text-sm flex justify-center items-center rounded-full gap-2 p-3 py-3 text-dark font-semibold">
+           	<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+						<path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+						<path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+						<path d="M8.7 10.7l6.6 -3.4" />
+						<path d="M8.7 13.3l6.6 3.4" />
+					</svg>
+        		Share
+         </button>
+        	<button class="bg-white text-sm flex justify-center items-center rounded-full gap-2 p-3 py-3 text-dark font-semibold">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+  <path d="M7 11l5 5l5 -5" />
+  <path d="M12 4l0 12" />
+</svg>
+       		Download
+         </button>
+        </section>
       </section>
       
       <div class="img-track ">
-                  <div class="bg-lighterDark  rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-                <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-          <div class="bg-lighterDark rounded-xl"></div>
+                  <div class="bg-lighterDark  rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+                <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+          <div class="bg-lighterDark rounded-3xl"></div>
   	
      </div>
       
@@ -202,7 +224,7 @@
             </svg>
           </button>
           <button class="nav-btn aspect-square">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="36" height="36" viewBox="0 0 24 24" stroke-width="3" stroke="hsl(354, 92%, 67%)" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
             </svg>
@@ -216,14 +238,14 @@
             <button>All</button>
           </div>
           <div class="img-track">
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
           </div>
         </div>
         <div class="border-2 border-blue-600" id="category-sec">
@@ -231,14 +253,14 @@
             <button>Categories</button>
           </div>
           <div class="img-track">
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
           </div>
         </div>
         <div class="border-2 border-blue-600" id="trending-sec">
@@ -246,24 +268,24 @@
             <button>Trending Now</button>
           </div>
           <div class="img-track">
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
-            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
+            <div class="bg-lighterDark rounded-3xl"></div>
           </div>
         </div>
       </section>
     </main>
-    <footer class=" bg-white fixed bottom-0 w-full  h-16">
+    <footer class=" bg-white drk:bg-lightDark fixed bottom-0 w-full  h-14">
       <!-- Nav Container -->
-  			<nav class="flex h-full  p-2 px-6">
+  			<nav class="flex h-full drk:bg-lighterDark rounded-t-[2rem] p-2 px-4">
 				<ul class="flex justify-between h-full w-full">
 					<li>
-						<button class="nav-btn">
+						<button class="nav-btn" id="homeBtn">
 							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 								<path d="M5 12l-2 0l9 -9l9 9l-2 0" />
@@ -273,7 +295,7 @@
 						</button>
 					</li>
 					<li>
-						<button class="nav-btn">
+						<button class="nav-btn" id="setupBtn">
 							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-carousel-horizontal-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 								<path d="M16 4h-8a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
@@ -283,7 +305,7 @@
 						</button>
 					</li>
 					<li>
-						<button class="nav-btn translate-y-[calc(-50%_-_.5rem)] rounded-full heart" data-locked="true">
+						<button class="nav-btn translate-y-[calc(-50%_-_.5rem)] rounded-full drk:bg-lighterDark drk:shadow-lg heart" id="favBtn" data-locked="true">
 							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#F85D6D" fill="#F85D6D" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 								<path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
@@ -294,16 +316,16 @@
 						<button class="nav-btn">
 							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-grid" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-								<path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-								<path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-								<path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path fill="currentColor" d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path fill="currentColor" d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path fill="currentColor" d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+								<path fill="currentColor" d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
 							</svg>
 						</button>
 					</li>
 					<li>
 						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 								<path d="M4 6l16 0" />
 								<path d="M4 12l16 0" />
