@@ -1,28 +1,35 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/main.css" />
-        <title>BuffyWalls</title>
-        <link rel="icon" href="icon.png" type="image/icon type" />
-    </head>
-    <body
-        class="loading h-screen border-2 border-lightPink grid dark:bg-ligtDark dark:text-wite"
-    >
-        <div class="" id="app">
-        			<aside class="absolute overflow-auto h-[calc(100%_-_5rem)] w-2/3 top-0 left-0" id="menu">
 
-			<header class=" py-6 flex border-b justify-between h-40 ">
-				<a class="rounded-full overflow-hidden aspect-square bg-indigo-900" href="#">
-					<img src="icon.png" alt="">
-				</a>
-				<button id="back">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000"><g data-name="Layer 2"><g data-name="arrow-ios-back"><rect width="24" height="24" transform="rotate(90 12 12)" opacity="0" /><path d="M13.83 19a1 1 0 0 1-.78-.37l-4.83-6a1 1 0 0 1 0-1.27l5-6a1 1 0 0 1 1.54 1.28L10.29 12l4.32 5.36a1 1 0 0 1-.78 1.64z" /></g></g></svg>
-				</button>
-			</header>
-			<ul class="  grid auto-rows-[minmax(3.5rem,_1fr)] text-left border-0" 5rem>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>BuffyWalls</title>
+  <link rel="icon" href="icon.png" type="image/icon type" />
+</head>
+
+<body class="loading relative overflow-hidden h-screen w-screen border-2 border-lightPink grid dark:bg-ligtDark dark:text-wite">
+
+  <div class="" id="app">
+   <aside class="absolute overflow-auto  h-[calc(100%_-_5rem)] w-2/3 top-0 left-0" id="menu">
+      <!-- items -->
+      <header class=" py-6 flex border-b justify-between h-40 ">
+        <a class="rounded-full aspect-square bg-indigo-900" href="#">
+        </a>
+        <button id="back">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000">
+            <g data-name="Layer 2">
+              <g data-name="arrow-ios-back">
+                <rect width="24" height="24" transform="rotate(90 12 12)" opacity="0" />
+                <path d="M13.83 19a1 1 0 0 1-.78-.37l-4.83-6a1 1 0 0 1 0-1.27l5-6a1 1 0 0 1 1.54 1.28L10.29 12l4.32 5.36a1 1 0 0 1-.78 1.64z" />
+              </g>
+            </g>
+          </svg>
+        </button>
+      </header>
+	<ul class="  grid auto-rows-[minmax(3.5rem,_1fr)] text-left border-0" 5rem>
 				<li class="" data-locked="false">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -146,86 +153,118 @@
 					Version 1.0.1
 				</p>
 			</footer>
-		</aside>
-
-            <main class="grid border-2 border-amber-300" id="scaler">
-			<header class="flex row-span-1 justify-center items-center p-0 px-6 pr-2 ">
-				<nav class=" flex items-center w-full  lg-w-2xl gap-0">
-					<h1 class="font-bold app-name">BuffyWalls</h1>
-					<button class="nav-btn ml-auto aspect-square hover:drop-shadow-xl " id="menu-btn">
-						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-deep" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-							<path d="M4 6h16" />
-							<path d="M7 12h13" />
-							<path d="M10 18h10" />
-						</svg>
-					</button>
-					<button class="nav-btn aspect-square">
-						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-							<path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-						</svg>
-					</button>
-				</nav>
-	
-		</header>
-	               <section class=" font-semibold" id="content">
-                    <div class="border-2 border-blue-600" id="newest-sec">
-                        <div class="track-title flex justify-between p-6 py-2">
-														<button>Newest</button>
-                            <button>All</button>
-                        </div>
-                        <div id="img-track">
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                        </div>
-                    </div>
-                    <div class="border-2 border-blue-600" id="category-sec">
-                          <div class="track-title flex justify-between p-6 py-2">
-														<button>Categories</button>
-                       </div>
-                       <div id="img-track">
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                        </div>
-                    </div>
-                    <div class="border-2 border-blue-600" id="trending-sec">
-                           <div class="track-title flex justify-between p-6 py-2">
-														<button>Trending Now</button>
-                        </div>
-                      <div id="img-track">
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                            <div class="bg-lighterDark rounded-xl"></div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-	       </div>
-		<footer class=" fixed bottom-0  w-full h-16">
-			<!-- Nav Container -->
-			<nav class="flex mx-auto h-full p-2 px-6">
+    </aside>
+  <!-- Modal -->
+   <div class="modal overflow-y-auto  border  border-lightPink px-3 transition-transform duration-[75ms] " id="modal" >
+      <header class="flex relative mb-2  items-center  justify-center p-2 px-6 ">
+        <button class=" w-8 left-0 absolute" id="closeModal">
+						<svg xmlns="http://www.w3.org/2000/svg" class="fill-lightPink" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-ios-back"><rect width="24" height="24" transform="rotate(90 12 12)" opacity="0"/><path d="M13.83 19a1 1 0 0 1-.78-.37l-4.83-6a1 1 0 0 1 0-1.27l5-6a1 1 0 0 1 1.54 1.28L10.29 12l4.32 5.36a1 1 0 0 1-.78 1.64z"/></g></g></svg>
+        </button>
+        <h2 class="app-name ">Category</h2>
+      </header>
+      
+      <section class="overflow-hidden rounded-3xl aspect-square overflow-hidden" id="currentImgWrapper">
+        <img class="" src="thumbnails/wall13-min.jpg" id="modalImg" alt="">
+      </section>
+      
+      <div class="img-track ">
+                  <div class="bg-lighterDark  rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+                <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+          <div class="bg-lighterDark rounded-xl"></div>
+  	
+     </div>
+      
+   </div>
+    
+    <main class="grid border-2 border-amber-300"  id="scaler">
+      <header class="flex row-span-1 justify-center items-center p-0 px-6 pr-2 ">
+        <nav class=" flex items-center w-full  lg-w-2xl gap-0">
+          <h1 class="app-name">BuffyWalls</h1>
+          <button class="nav-btn ml-auto aspect-square hover:drop-shadow-xl " id="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-deep" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 6h16" />
+              <path d="M7 12h13" />
+              <path d="M10 18h10" />
+            </svg>
+          </button>
+          <button class="nav-btn aspect-square">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+            </svg>
+          </button>
+        </nav>
+      </header>
+      <section class=" font-semibold " id="content">
+        <div class="border-2 border-blue-600" id="newest-sec">
+          <div class="track-title flex justify-between p-6 py-2">
+            <button>Newest</button>
+            <button>All</button>
+          </div>
+          <div class="img-track">
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+          </div>
+        </div>
+        <div class="border-2 border-blue-600" id="category-sec">
+          <div class="track-title flex justify-between p-6 py-2">
+            <button>Categories</button>
+          </div>
+          <div class="img-track">
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+          </div>
+        </div>
+        <div class="border-2 border-blue-600" id="trending-sec">
+          <div class="track-title flex justify-between p-6 py-2">
+            <button>Trending Now</button>
+          </div>
+          <div class="img-track">
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+            <div class="bg-lighterDark rounded-xl"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class=" bg-white fixed bottom-0 w-full  h-16">
+      <!-- Nav Container -->
+  			<nav class="flex h-full  p-2 px-6">
 				<ul class="flex justify-between h-full w-full">
 					<li>
 						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 								<path d="M5 12l-2 0l9 -9l9 9l-2 0" />
 								<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
@@ -235,7 +274,7 @@
 					</li>
 					<li>
 						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-carousel-horizontal-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 								<path d="M16 4h-8a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
 								<path d="M22 6a1 1 0 0 1 .117 1.993l-.117 .007h-1v8h1a1 1 0 0 1 .117 1.993l-.117 .007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-8a2 2 0 0 1 1.85 -1.995l.15 -.005h1z" stroke-width="0" fill="currentColor" />
@@ -244,8 +283,8 @@
 						</button>
 					</li>
 					<li>
-						<button class="nav-btn translate-y-[calc(-50%_-_.5rem)] rounded-full heart"  data-locked="true">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#F85D6D" fill="#F85D6D" stroke-linecap="round" stroke-linejoin="round">
+						<button class="nav-btn translate-y-[calc(-50%_-_.5rem)] rounded-full heart" data-locked="true">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#F85D6D" fill="#F85D6D" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 								<path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
 							</svg>
@@ -253,7 +292,7 @@
 					</li>
 					<li>
 						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-grid" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 								<path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
 								<path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
@@ -264,7 +303,7 @@
 					</li>
 					<li>
 						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 								<path d="M4 6l16 0" />
 								<path d="M4 12l16 0" />
@@ -274,8 +313,11 @@
 					</li>
 				</ul>
 			</nav>
-		</footer>
-	        <script type="module" src="js/load.js" defer></script>
-        <script type="module" src="js/script.js" defer></script>
-    </body>
+	  </footer>
+  </div>
+
+  <script type="module" src="js/load.js" defer></script>
+  <script type="module" src="js/script.js" defer></script>
+</body>
+
 </html>
