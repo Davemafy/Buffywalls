@@ -643,6 +643,10 @@ video {
   position: relative;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -685,6 +689,10 @@ video {
   margin-left: auto;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -703,6 +711,10 @@ video {
 
 .h-1\/4 {
   height: 25%;
+}
+
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-16 {
@@ -735,10 +747,6 @@ video {
 
 .h-\[calc\(100\%_-_5rem\)\] {
   height: calc(100% - 5rem);
-}
-
-.h-\[calc\(100svh_-_3rem\)\] {
-  height: calc(100svh - 3rem);
 }
 
 .h-\[calc\(100svh_-_4rem\)\] {
@@ -840,6 +848,10 @@ video {
   align-content: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -862,6 +874,10 @@ video {
 
 .gap-1\.5 {
   gap: 0.375rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-4 {
@@ -902,8 +918,9 @@ video {
   border-radius: 9999px;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
+.rounded-t-\[2rem\] {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
 }
 
 .border {
@@ -962,6 +979,11 @@ video {
   background-color: rgb(49 46 129 / var(--tw-bg-opacity));
 }
 
+.bg-lightDark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+}
+
 .bg-lighterDark {
   --tw-bg-opacity: 1;
   background-color: rgb(36 36 36 / var(--tw-bg-opacity));
@@ -988,12 +1010,12 @@ video {
   padding: 0.5rem;
 }
 
-.p-4 {
-  padding: 1rem;
+.p-3 {
+  padding: 0.75rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
+.p-4 {
+  padding: 1rem;
 }
 
 .p-6 {
@@ -1003,6 +1025,11 @@ video {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .px-6 {
@@ -1030,6 +1057,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1040,8 +1072,8 @@ video {
   padding-bottom: 1.75rem;
 }
 
-.pl-6 {
-  padding-left: 1.5rem;
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .pr-16 {
@@ -1076,6 +1108,11 @@ video {
 .text-blue-300 {
   --tw-text-opacity: 1;
   color: rgb(147 197 253 / var(--tw-text-opacity));
+}
+
+.text-dark {
+  --tw-text-opacity: 1;
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1183,7 +1220,7 @@ body.loading #track div {
 
 body:has(#modal.show) #app :is(aside, main, footer ){
   transition: 200ms ease;
-  scale: 1.12;
+  scale: 1.06;
 }
 
 #app main {
@@ -1382,8 +1419,8 @@ main .img-track{
   opacity: 1;
 }
 
-#track div {
-  transition: 500ms ease;
+.modal .overlay {
+  background: linear-gradient(#0001, #0001 ,#0003 , #0009);
 }
 
 img {
@@ -1402,7 +1439,7 @@ img[src=""] {
   scale: 0.6;
 }
 
-*:not(.img-track  div) {
+*:not(.img-track  div, #favBtn ) {
   border: 0 !important;
 }
 
