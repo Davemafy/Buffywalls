@@ -737,6 +737,10 @@ video {
   height: calc(100% - 5rem);
 }
 
+.h-\[calc\(100svh_-_3rem\)\] {
+  height: calc(100svh - 3rem);
+}
+
 .h-\[calc\(100svh_-_4rem\)\] {
   height: calc(100svh - 4rem);
 }
@@ -988,6 +992,10 @@ video {
   padding: 1rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
@@ -1030,6 +1038,10 @@ video {
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
 }
 
 .pr-16 {
