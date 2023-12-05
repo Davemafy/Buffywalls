@@ -11,7 +11,7 @@ window.addEventListener("click", function (e) {
         closeMenu();
     } else if (target.matches(" .img-track img")) {
         if (
-            target.classList.contains("loaded") &&
+            
             !menu.classList.contains("open") 
              ) {
             showModal(
