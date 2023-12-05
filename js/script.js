@@ -75,7 +75,7 @@ function setIndex(e) {
 
 modal.addEventListener("transitionend", setIndex);
 
-let effects = ["opacity-10"];
+let effects = ["opacity-100"];
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
