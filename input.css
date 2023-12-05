@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-    .heart {
-        @apply w-[3rem] mx-auto bg-white  shadow-[0px_0px_1rem_#999];
-    }
     .app-name {
         @apply font-bold  text-lightPink text-[1.45rem];
     }
@@ -22,6 +19,9 @@
     }
     .nav-btn {
         @apply w-12 aspect-square grid  place-items-center;
+    }
+    .heart {
+        @apply w-[3.5rem] mx-auto bg-white  shadow-[0px_0px_1rem_#999];
     }
     .modal {
         @apply bg-white  fixed z-10 inset-0 overflow-hidden scale-0 h-full w-full;
@@ -127,7 +127,8 @@ footer {
 }
 
 .img-track div {
-    background: url("/preload/spin.gif");
+  	border-radius: 1.5rem ;
+    background: url("/preload/spin.gif"), #1111;
     background-position: center;
     background-repeat: no-repeat !important;
     background-size: clamp( 50px, 40%, 60px);

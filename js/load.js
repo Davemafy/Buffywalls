@@ -17,7 +17,7 @@ function render() {
     const walls = document.querySelectorAll("#wall");
 
     walls.forEach((wall, index) => {
-        if (navigator.onLine) {
+     
             if (wall.complete) {
                 wall.classList.replace("loading", "loaded");
 
@@ -32,7 +32,7 @@ function render() {
                     }
                 });
             }
-        }
+
     });
 }
 
