@@ -128,7 +128,7 @@ footer {
 
 .img-track div {
   	border-radius: 1.5rem ;
-    background: url("/preload/spin.gif"), #1111;
+    background: url("/preload/spinner.gif"), #1111;
     background-position: center;
     background-repeat: no-repeat !important;
     background-size: clamp( 50px, 40%, 60px);
