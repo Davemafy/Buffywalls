@@ -29,6 +29,9 @@
     .modal.show {
         @apply scale-100 opacity-100;
     }
+    .img-track div:has(.loading){
+        @apply animate-pulse;
+    }
 }
 
 @font-face {
@@ -45,21 +48,31 @@ body {
     height: 100dvh !important;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0;
-    overflow: hidden;
-    border: solid red;
-}
-
-::-webkit-scrollbar-thumb {
-    background: hsl(354, 92%, 67%);
-    border-radius: 2rem;
-    height: 0px;
-}
 
 .modal * {
     border: 0px solid red;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #161315 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #161315;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
 }
 
 .modal .img-.img-track div  {
@@ -68,12 +81,6 @@ body {
     background: #1111;
     border: solid;
     /*border-image: fill 0 linear-gradient(#0003 , #0004);*/
-}
-
-body.loading #track div {
-    height: 100%;
-
-    width: 100%;
 }
 
 #category-sec #track img {
@@ -128,12 +135,14 @@ footer {
 
 .img-track div {
   	border-radius: 1.5rem ;
-    background: url("/preload/spinner.gif"), #1111;
+    background: url("/preload/spinner.gif"), hsl(0, 0%, 0%, 0.05);
     background-position: center;
     background-repeat: no-repeat !important;
     background-size: clamp( 50px, 40%, 60px);
     mix-blend-mode: none ;
 }
+
+
 
 
 
