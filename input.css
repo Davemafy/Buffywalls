@@ -24,13 +24,16 @@
         @apply w-[3.5rem] mx-auto bg-white  shadow-[0px_0px_1rem_#999];
     }
     .modal {
-        @apply bg-white  fixed z-10 inset-0 overflow-hidden scale-0 h-full w-full;
+        @apply bg-white  fixed z-[-1] inset-0 overflow-hidden scale-[0.7] h-full w-full;
     }
     .modal.show {
-        @apply scale-100 opacity-100;
+        @apply scale-100 z-10 opacity-100;
     }
     .img-track div:has(.loading){
-        @apply animate-pulse;
+        @apply animate-pulse ;
+    }
+    #closeModal{
+    	@apply cursor-none;
     }
 }
 
@@ -40,6 +43,7 @@
 }
 
 body {
+	  --thumb-cl: ;
     font-family: OpenSans;
 
     background-repeat: no-repeat;
@@ -62,7 +66,7 @@ body {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 16px;
+  width: 14px;
 }
 
 *::-webkit-scrollbar-track {
@@ -70,9 +74,14 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #161315;
+	
+  background-color: var(--thumb-cl,#161315);
   border-radius: 10px;
   border: 3px solid #ffffff;
+}
+
+.modal{
+	--thumb-cl: hsl(354, 92%, 67%);
 }
 
 .modal .img-.img-track div  {
@@ -135,7 +144,7 @@ footer {
 
 .img-track div {
   	border-radius: 1.5rem ;
-    background: url("/preload/spinner.gif"), hsl(0, 0%, 0%, 0.05);
+    background: url("https://doodleipsum.com/600/outline"), hsl(0, 0%, 10%, 0.045);
     background-position: center;
     background-repeat: no-repeat !important;
     background-size: clamp( 50px, 40%, 60px);

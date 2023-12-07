@@ -10,10 +10,8 @@ window.addEventListener("click", function (e) {
     } else if (target.matches("#back, #back *")) {
         closeMenu();
     } else if (target.matches(" .img-track img")) {
-        if (
-            
-            !menu.classList.contains("open") 
-             ) {
+        if (!menu.classList.contains("open")) {
+            console.log(target.src);
             showModal(
                 target,
                 target.parentElement.parentElement.parentElement.textContent
@@ -36,14 +34,13 @@ function showModal(target, text) {
 }
 
 function makeModal(src, text, target) {
-    if (src) {
-        modalImg.setAttribute("src", src);
-        modalImg.parentElement.style.display = "auto";
-    } else {
-        modalImg.parentElement.style.display = "none";
+    modalImg.setAttribute("src", src);
+    modalImg.parentElement.style.height = "auto";
+    if (!src) {
+        modalImg.parentElement.style.height = "0";
     }
     if (text) {
-    	if(target.parentElement.parentElement.parentElement === modal) return;
+        if (target.parentElement.parentElement.parentElement === modal) return;
         modalTitle.textContent = text;
 
         if (text === document.getElementById("newest-sec").textContent) {

@@ -47,7 +47,7 @@ function spinner(amount) {
     for (var i = 0; i < amount; i++) {
         let id = random(29);
         divWrap += `<div>
-                  <img id="wall" class="loading" src="https://source.unsplash.com/random/?${id}" loading="lazy" alt="">
+                  <img id="wall" class="loading" src="https://source.unsplash.com/random/${id}" loading="lazy" alt="">
                 </div>`;
     }
 
