@@ -36,8 +36,10 @@ function showModal(target, text) {
 function makeModal(src, text, target) {
     modalImg.setAttribute("src", src);
     modalImg.parentElement.style.height = "auto";
+        modalImg.parentElement.style.display = "block";
     if (!src) {
         modalImg.parentElement.style.height = "0";
+        modalImg.parentElement.style.display = "none";
     }
     if (text) {
         if (target.parentElement.parentElement.parentElement === modal) return;
@@ -63,27 +65,3 @@ function closeMenu() {
     scaler.classList.remove("transit");
 }
 
-function setIndex(e) {
-    let target = e.target;
-    if (target.classList.contains("show")) return;
-
-    //console.log('closed', target.classList)
-}
-
-modal.addEventListener("transitionend", setIndex);
-
-let effects = ["opacity-100"];
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.parentElement.style.transition = "600ms";
-            entry.target.parentElement.classList.remove(...effects);
-        } else {
-            entry.target.parentElement.style.transition = "500ms";
-            entry.target.parentElement.classList.add(...effects);
-        }
-    });
-});
-
-walls.forEach(el => observer.observe(el));

@@ -1,0 +1,90 @@
+
+//setTimeout(openMenu, 100)
+
+// Make an API request to Unsplash
+
+
+window.addEventListener("click", function (e) {
+    let target = e.target;
+
+    if (target.matches("#menu-btn , #menu-btn *")) {
+        openMenu();
+    } else if (target.matches("#back, #back *")) {
+        closeMenu();
+    } else if (target.matches(".img-track img")) {
+        if (!menu.classList.contains("open") && !modal.classList.contains('show')) {
+            showModal(
+                target,
+                target.parentElement.parentElement.parentElement
+            );
+        } else if (modal.classList.contains('show')){
+        	showFullScreenModal(target)
+        }
+    } else if (target.matches("#content  button")) {
+        if (!menu.classList.contains("open")) {
+            showModal(target, target);
+        }
+    } else if (target.matches("#closeModal, #closeModal *")) {
+        modal.classList.remove("show");
+    } else if (target.matches("#closeFullModal, #closeFullModal *")) {
+        fullSreenModal.classList.remove("show");
+    } else if (target.matches("#modalImg")){
+    	expandImg(target)
+    }
+});
+
+function openMenu() {
+    if (!menu && scaler) return;
+
+    menu.classList.add("open");
+    scaler.classList.add("transit");
+}
+
+function closeMenu() {
+    if (!menu && scaler) return;
+
+    menu.classList.remove("open");
+    scaler.classList.remove("transit");
+}
+
+function showModal(target, parent) {
+    let src = target.src;
+    setModal(src, parent);
+    modal.classList.add("show");
+}
+
+function setModal(src, target){
+	modalImg.setAttribute("src", src);
+	downloadBtn.setAttribute('href', src)
+  modalTitle.textContent = target.textContent
+	if(target.id  === 'newest-sec')
+		modalTitle.textContent = target.textContent.replaceAll('All', '')
+}
+/*
+function makeModal(src, text, target) {
+    modalImg.setAttribute("src", src);
+    downloadBtn.setAttribute('href', src)
+    modalImg.parentElement.style.height = "auto";
+    if (!src) {
+        modalImg.parentElement.style.height = "0";
+    }
+    if (text) {
+        if (target.parentElement.parentElement.parentElement === modal) return;
+        modalTitle.textContent = text;
+
+        if (text === document.getElementById("newest-sec").textContent) {
+            modalTitle.textContent = "Newest";
+        }
+    }
+}*/
+
+function showFullScreenModal(target){
+	modalFullImg.setAttribute("src", target.src);
+	downloadFullBtn.setAttribute('href', target.src)
+	fullSreenModal.classList.add('show')
+}
+
+
+function expandImg(target){
+	
+}

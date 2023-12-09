@@ -20,11 +20,14 @@
     .nav-btn {
         @apply w-12 aspect-square grid  place-items-center;
     }
+    .nav-btn img:not(.color-icon, .heart img){
+    	@apply dark:invert-0;
+    }
     .heart {
         @apply w-[3.5rem] mx-auto bg-white  shadow-[0px_0px_1rem_#999];
     }
     .modal {
-        @apply bg-white  fixed z-[-1] inset-0 overflow-hidden scale-[0.7] h-full w-full;
+        @apply bg-white  fixed z-[-1] inset-0 overflow-hidden scale-[0.8] h-full w-full;
     }
     .modal.show {
         @apply scale-100 z-10 opacity-100;
@@ -32,7 +35,9 @@
     .img-track div:has(.loading){
         @apply animate-pulse ;
     }
-    #closeModal{
+    #closeModal,
+    #closeFullModal,
+    #closeProModal{
     	@apply cursor-none;
     }
 }
@@ -110,7 +115,7 @@ body {
     transition: 500ms ease-in-out;
 }
 
-body:has(#modal.show) #app :is(aside, main, footer) {
+body:has(.modal.show) #app :is(aside, main, footer) {
     transition: 200ms ease;
     scale: 1.06;
 }
@@ -130,7 +135,7 @@ footer {
     gap: 0.5rem;
 
     grid-template-rows:
-        minmax(min(100%, 4rem), 1.1fr) minmax(0rem, max(15vh, 6.5rem))
+        minmax(min(100%, 9rem), 1.1fr) minmax(0rem, max(15vh, 6.5rem))
         minmax(0rem, 1.1fr);
 }
 
@@ -145,9 +150,10 @@ footer {
 .img-track div {
   	border-radius: 1.5rem ;
     background: url("https://doodleipsum.com/600/outline"), hsl(0, 0%, 10%, 0.045);
+    background: url("../preload/spinner.gif");
     background-position: center;
     background-repeat: no-repeat !important;
-    background-size: clamp( 50px, 40%, 60px);
+    background-size: clamp( 2px, 70%, 70px);
     mix-blend-mode: none ;
 }
 
@@ -264,8 +270,23 @@ main .img-track {
     grid-auto-columns: calc(100% / 3);
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 1.5rem;
+    scroll-padding-inline: 0rem;
 }
+
+body.loading .modal {
+	display: grid;
+	grid-template-rows: auto auto 1fr ;
+}
+body.loading .modal * {
+	border: solid 0 !important;
+}
+body.loading .modal .img-track {
+	grid-template-columns: 1fr ;
+	grid-template-rows: 1fr;
+}
+
+
+
 
 .modal .img-track {
     margin-top: 2rem;
@@ -277,6 +298,12 @@ main .img-track {
     grid-template-columns: repeat(2, 1fr);
 }
 
+body.loaded .modal .img-track.full:has() {
+	display: grid;
+	grid-auto-rows: auto;
+	margin: 0;
+}
+
 .modal .img-track div {
     border-radius: 1.5rem;
 }
@@ -286,7 +313,7 @@ main .img-track {
 }
 
 .img-track > * {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 #category-sec .img-track {
@@ -300,6 +327,15 @@ main .img-track {
 
 .img-track > div {
     overflow: hidden;
+}
+
+body.loading main .img-track{
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr;
+    height: 100%;
+}
+body.loading main .img-track div{
+    width: 100%;
 }
 
 #menu {
@@ -359,11 +395,20 @@ main .img-track {
     background: linear-gradient(#0001, #0001, #0003, #0009);
 }
 
-img {
+img:not(button img){
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
+main button img ,
+nav button:not(.heart) img {
+	width: 60%;
+	aspect-ratio: 1 / 1;
+}
+
+
+
 
 img[src=""] {
     display: none;
@@ -374,6 +419,24 @@ img[src=""] {
     scale: 0.6;
 }
 
+.fa-share {
+	height: 1.5rem;
+	width: 1.5rem;
+  background: url("../icons/share.svg");
+  background-size: cover;
+  background-position: center ;
+  background-repeat: no-repeat;
+}
+.fa-download {
+	height: 1.5rem;
+	width: 1.5rem;
+  background: url("../icons/download.svg");
+  background-size: cover;
+  background-position: center ;
+  background-repeat: no-repeat;
+}
+
 *:not(.img-track div, #favBtn) {
     border: 0 !important;
+    outlie: 1px solid red !important;
 }

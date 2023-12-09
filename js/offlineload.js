@@ -42,7 +42,8 @@ function render() {
                 document.body.classList.replace("partial", "loaded");
             }
         } else {
-            wall.addEventListener("load", () => {
+            wall.addEventListener("load", (e) => {
+            	 e.preventDefault()
                 wall.classList.replace("loading", "loaded");
                 if (index == walls.length - 1) {
                     document.body.classList.replace("partial", "loaded");
@@ -57,24 +58,32 @@ function random(num) {
     return index;
 }
 
+    
 function spinner(amount, wrapper) {
     // let divWrap = document.createDocumentFragment();
     let divWrap = "";
-		let arr = []
+    let arr = []
     for (var i = 1; i <= amount; i++) {
         let id = random(29);
+        
         let track = wrapper.parentElement.id
         if (track === 'modal') {
-            divWrap += `<div>
+            /*divWrap += `<div>
                   <img id="wall" class="loading" src="https://source.unsplash.com/random/${id *.5}" loading="lazy" alt="">
+                </div>`;*/
+            divWrap += `<div>
+                  <img id="wall" data-group="New" class="loading" src="thumbnails/wall${random(id)}-min.jpg" loading="lazy" data-locked="false" alt="">
                 </div>`;
-        } 
+        }
         else if (track === 'groupModal') {
-            divWrap += `<div>
+            /*divWrap += `<div>
                   <img id="wall" class="loading" src="https://source.unsplash.com/random/${id *.5}" loading="lazy" alt="">
+                </div>`;*/
+            divWrap += `<div>
+                  <img id="wall" data-group="New" class="loading" src="thumbnails/wall${random(id)}-min.jpg" loading="lazy" data-locked="false" alt="">
                 </div>`;
         } else if(track === 'newest-sec') {
-            if (i > 3){divWrap += `<div>             
+            if (!i){divWrap += `<div>             
             <img id="wall" data-group="Newest" class="loading" src="https://source.unsplash.com/random/newest/${id}" loading="lazy" alt="">
                </div>`;
               } else{
@@ -87,15 +96,12 @@ function spinner(amount, wrapper) {
          else if(track === 'category-sec') {
          	 let categories = ['Amoled', 'Abstract', 'Acrylic', 'Funny', 'Material', 'B / W ', 'Art', 'Geometric', 'Space', 'Minimal', 'More']
          	 
-           /* divWrap += `<div data-group='Categories' id='${categories[i]}'>
+            divWrap += `<div data-group='Categories' id='${categories[i]}'>
                   <img id="wall" class="loading" src="thumbnails/wall${id}-min.jpg" loading="lazy" alt="">
-                </div>`;*/
-            divWrap += `<div>
-                  <img id="wall" class="loading" src="https://source.unsplash.com/random/${categories[i]}" loading="lazy" alt="">
                 </div>`;
         }
         else if(track === 'trending-sec') {
-        	if(i  > 3){
+        	if(!i){
             divWrap += `<div>          
           				 <img id="wall" data-group="Trending" class="loading" src="https://source.unsplash.com/random/trending:${id}" loading="lazy" alt="">
                </div>`;
@@ -104,12 +110,12 @@ function spinner(amount, wrapper) {
         	else{
         		
         		divWrap += `<div>
-                  <img id="wall" data-group="Trending" class="loading" src="thumbnails/wall${id}-min.jpg" loading="lazy" alt="">
+                  <img id="wall" data-group="Trending" class="loading" src="thumbnails/wall${random(id)}-min.jpg" loading="lazy" alt="">
                 </div>`;
         	}
         }
+        }
         console.log(wrapper.parentElement.id)
-      }
-
+        
     return divWrap;
 }
