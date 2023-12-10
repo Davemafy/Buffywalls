@@ -5,15 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
   <title>BuffyWalls</title>
-  <link rel="icon" href="/assets/icon-cvg40sVN.png" type="image/icon type" />
-  <script type="module" crossorigin src="/assets/index-ktIaXyrJ.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-onBbSA-n.css">
+  <link rel="icon" href="/assets/icon-16de1405.png" type="image/icon type" />
+  <script type="module" crossorigin src="/assets/index-23981d20.js"></script>
+  <link rel="stylesheet" href="/assets/index-c606023e.css">
 </head>
 
 <body class="loading relative overflow-hidden h-screen w-screen border-2 border-lightPink grid drk:bg-lightDark drk:text-white">
-
-  <div class="" id="app">
+  <div class="bg-white drk:bg-lightDark" id="app">
    <aside class="absolute overflow-auto  h-[calc(100%_-_5rem)] w-2/3 top-0 left-0" id="menu">
       <!-- items -->
       <header class=" py-6 flex border-b justify-between h-40 ">
@@ -155,133 +155,159 @@
 				</p>
 			</footer>
     </aside>
-  <!-- Modal -->
-   <div class="modal overflow-y-auto  border  border-lightPink px-3 transition-transform duration-[75ms] " id="modal" >
-      <header class="flex relative mb-2 drk:bg-lightDark  items-center  justify-center p-2 px-6 ">
-        <button class=" w-8 left-0 absolute" id="closeModal">
-						<svg xmlns="http://www.w3.org/2000/svg" class="fill-lightPink" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-ios-back"><rect width="24" height="24" transform="rotate(90 12 12)" opacity="0"/><path d="M13.83 19a1 1 0 0 1-.78-.37l-4.83-6a1 1 0 0 1 0-1.27l5-6a1 1 0 0 1 1.54 1.28L10.29 12l4.32 5.36a1 1 0 0 1-.78 1.64z"/></g></g></svg>
+    <!-- ImgModal -->
+    <div class="modal overflow-y-auto border border-lightPink px-3 transition-transform duration-[75ms]  " id="modal">
+      <header class="flex  mb-2 relative top-0 z-10 drk:bg-lightDark items-center justify-center p-2 px-6">
+        <button class="w-8 left-0 absolute close" id="closeModal">
+          <img src="/assets/backpink-a514f6f0.svg" alt="">
         </button>
-        <h2 class="app-name " id="modalTitle">Category</h2>
+        <h2 class="app-name" id="modalTitle">Category</h2>
       </header>
-      
-      <section class="overflow-hidden max-h-[50%] relative rounded-3xl  aspect-square overflow-hidden w-full md:aspect-auto" id="currentImgWrapper">
-        <img class="" src="/assets/wall13-min-STdjgRlR.jpg" id="modalImg" alt="">
+      <section class="overflow-hidden max-h-[80%] md:max-h-[50%] relative rounded-3xl aspect-square overflow-hidden w-full md:aspect-auto" id="currentImgWrapper">
+        <img class="object-center" src="" id="modalImg" alt="" />
         <section class="flex bg-lightDark overlay justify-center gap-4 items-end absolute inset-0 pb-8" id="socials">
-        	<a class="bg-white text-sm flex justify-center items-center rounded-full gap-2 p-3 py-3 text-dark font-semibold">
-           	<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-						<path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-						<path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-						<path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-						<path d="M8.7 10.7l6.6 -3.4" />
-						<path d="M8.7 13.3l6.6 3.4" />
-					</svg>
-        		Share
-         </a>
-        	<a href=" " download class="bg-white text-sm flex justify-center items-center rounded-full gap-2 p-3 py-3 text-dark font-semibold">
-					<svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-  <path d="M7 11l5 5l5 -5" />
-  <path d="M12 4l0 12" />
-</svg>
-       		Download
-         </a>
+          <a class="bg-white text-sm flex justify-center items-center rounded-full gap-2 p-3 py-3 text-dark font-semibold">
+            <i class="fa-share"></i>
+            Share
+          </a>
+          <a href=" " id="downloadBtn" download class="bg-white text-sm flex justify-center items-center rounded-full gap-2 p-3 py-3 text-dark font-semibold">
+            <i class="fa-download"></i>
+            Download
+          </a>
         </section>
       </section>
-      
-      <div class="img-track ">
-                  <div class="  rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-                <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-          <div class=" rounded-3xl"></div>
-  	
-     </div>
-      
-   </div>
+      <div class="img-track">
+        <div class="rounded-3xl bg-amber-500"></div>
+      </div>
+    </div>
+ 		<!-- groupModal -->
+    <div class="modal overflow-y-auto border border-lightPink px-3 transition-transform duration-[75ms]   " id="groupModal">
+      <header class="flex  mb-2 relative top-0 z-10 drk:bg-lightDark items-center justify-center p-2 px-6">
+        <button class="w-8 left-0 absolute close" id="closeGroupModal">
+          <img src="/assets/backpink-a514f6f0.svg" alt="">
+        </button>
+        <h2 class="app-name" id="groupModalTitle">Category</h2>
+      </header>
+     <div class="img-track full">
+        <div class="rounded-3xl bg-amber-500"></div>
+      </div>
+    </div>
     
-    <main class="grid border-2 border-amber-300"  id="scaler">
-      <header class="flex row-span-1 justify-center items-center p-0 px-6 pr-2 ">
-        <nav class=" flex items-center w-full  lg-w-2xl gap-0">
-          <h1 class="app-name">BuffyWalls</h1>
-          <button class="nav-btn ml-auto aspect-square hover:drop-shadow-xl " id="menu-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-deep" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 6h16" />
-              <path d="M7 12h13" />
-              <path d="M10 18h10" />
-            </svg>
+    <!-- fullImgModal -->
+    <div class="modal overflow-y-auto border border-lightPink transition-transform duration-[75ms] " id="fullSreenModal">
+      <header class="flex absolute  top-0 p-6 z-10 drk:bg-lightDark items-center justify-between w-full ">
+        <button class="w-8 close" id="closeFullModal">
+          <img class="invert" src="/assets/back-249926e8.svg" alt="">
+        </button>
+        <button class="w-8" data-locked="true">
+          <img class="invert" src="/assets/infinity-381d2385.svg" alt="infinity.svg">
+        </button>
+      </header>
+
+      <section class="overflow-hidden h-full relative overflow-hidden w-full md:aspect-auto" id="currentFullImgWrapper">
+        <img class="" src="/assets/wall18-min-bb2c7543.jpg" id="modalFullImg" alt="" />
+        <section class="flex bg-lightDark overlay px-4 justify-center gap-4 items-end absolute inset-0 pb-8" id="socials">
+          <a class="bg-white text-sm flex-1 flex justify-center items-center rounded-full gap-2 p-3 py-3 text-dark font-semibold">
+            <i class="fa-share"></i>
+            Share
+          </a>
+          <a href="" download class="bg-white text-sm flex-1 flex justify-center items-center rounded-full gap-2 p-3 py-3 text-dark font-semibold" id="downloadFullBtn">
+            <i class="fa-download"></i>
+            Download
+          </a>
+        </section>
+      </section>
+    </div>
+    
+    <!-- proModal -->
+    <div class="modal overflow-y-auto border border-lightPink transition-transform duration-[75ms]" id="proModal">
+      <header class="flex absolute top-0 p-6 z-10 drk:bg-lightDark items-center justify-between w-full">
+        <button class="w-8 close" id="closeProModal">
+          <img src="/assets/backpink-a514f6f0.svg" alt="">
+        </button>
+      </header>
+      
+      <section class="overflow-hidden  relative overflow-hidden w-full md:aspect-auto" id="">
+      </section>
+    </div>
+
+    <main class="grid border-2 border-amber-300" id="scaler">
+      <header class="flex row-span-1 justify-center items-center p-0 px-6 pr-2">
+        <nav class="flex items-center w-full lg-w-2xl gap-0">
+          <h1 class="app-name">
+          	BuffyWalls
+          </h1>
+          <button class="nav-btn  ml-auto aspect-square hover:drop-shadow-xl" id="menu-btn">
+            <img  src="/assets/menu-deep-ea0e3e47.svg" alt="">
           </button>
-          <button class="nav-btn aspect-square">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="32" height="32" viewBox="0 0 30 30" stroke-width="2.9" stroke="hsl(354, 92%, 67%)" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-            </svg>
+          <button class="nav-btn aspect-square " data-locked="true">
+            <img class="color-icon" src="/assets/infinitypink-c5b97a3f.svg" alt="infinity.svg">
           </button>
         </nav>
       </header>
-      <section class=" font-semibold " id="content">
+      <section class="font-semibold" id="content">
         <div class="border-2 border-blue-600" id="newest-sec">
           <div class="track-title flex justify-between p-6 py-2">
-            <button>Newest</button>
-            <button>All</button>
+            <button aria-owns="New">Newest</button>
+            <button aria-owns="New">All</button>
           </div>
-          <div class="img-track">
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
+          <div class="img-track relative">
+            <div class="rounded-3xl bg-amber-700"></div>
           </div>
         </div>
         <div class="border-2 border-blue-600" id="category-sec">
           <div class="track-title flex justify-between p-6 py-2">
-            <button>Categories</button>
+            <button aria-owns="Categories">Categories</button>
           </div>
           <div class="img-track">
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
+            <div class="absolute rounded-3xl"></div>
           </div>
         </div>
         <div class="border-2 border-blue-600" id="trending-sec">
           <div class="track-title flex justify-between p-6 py-2">
-            <button>Trending Now</button>
+            <button aria-owns="Trending">Trending Now</button>
           </div>
           <div class="img-track">
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
-            <div class=" rounded-3xl"></div>
+            <div class="rounded-3xl"></div>
           </div>
         </div>
       </section>
     </main>
-    <footer class=" bg-white drk:bg-lightDark fixed bottom-0 w-full  h-14">
+<!--    <footer class=" fixed bottom-0 container h-16">
+      
+      <nav class="flex h-full drk:bg-lighterDark rounded-t-[2rem] p-2 px-4">
+        <ul class="flex justify-between h-full w-full">
+          <li>
+            <button class="nav-btn" id="homeBtn">
+              <img src="icons/home-2.svg" alt="icons/home-2.svg">
+            </button>
+          </li>
+          <li>
+            <button class="nav-btn" id="setupBtn">
+                <img src="icons/carousel-horizontal-filled.svg" alt="">
+             </button>
+          </li>
+          <li>
+            <button class="nav-btn translate-y-[calc(-50%_-_.5rem)] rounded-full drk:bg-lighterDark drk:shadow-lg heart" id="favBtn" data-locked="true">
+              <img src="icons/heart.svg" alt="">
+            </button>
+          </li>
+          <li>
+            <button class="nav-btn">
+              <img src="icons/layout-grid.svg" alt="grid.svg">
+            </button>
+          </li>
+          <li>
+            <button class="nav-btn">
+              <img src="icons/menu-2.svg" alt="icons/menu-2.svg ">
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+    </footer>-->
+    
+        <footer class=" bg-white drk:bg-lightDark fixed bottom-0 w-full  h-14">
       <!-- Nav Container -->
   			<nav class="flex h-full drk:bg-lighterDark rounded-t-[2rem] p-2 px-4">
 				<ul class="flex justify-between h-full w-full">
@@ -337,8 +363,13 @@
 				</ul>
 			</nav>
 	  </footer>
-  </div>
+ 
 
+  </div>
+  
+  
+  
+  
 </body>
 
 </html>
