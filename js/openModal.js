@@ -44,7 +44,12 @@ window.addEventListener("click", e => {
             !modal.classList.contains("show") &&
             !groupModal.classList.contains("show")
         ) {
-            changeTitle(target.getAttribute("data-group")?target.getAttribute("data-group"): 'Category' , modalTitle);
+            changeTitle(
+                target.getAttribute("data-group")
+                    ? target.getAttribute("data-group")
+                    : "Category",
+                modalTitle
+            );
             setSrc(target.src, modalImg);
             openImgModal();
             setDownloadLink(target.src, downloadBtn);
@@ -67,13 +72,12 @@ window.addEventListener("click", e => {
                 closeFullImgModal();
             } else if (target.matches("#closeProModal, #closeProModal *")) {
                 closeProModal();
-            }
-             else if (target.matches("#closeGroupModal, #closeGroupModal *")) {
+            } else if (target.matches("#closeGroupModal, #closeGroupModal *")) {
                 closeGroupModal();
             }
-        } else if (target.matches("#content button")) {
-							  changeTitle(target.getAttribute("aria-owns"), groupModalTitle);
-                openGroupModal();
+        } else if (target.matches("#content button, #content button *")) {
+            changeTitle(target.getAttribute("aria-owns"), groupModalTitle);
+            openGroupModal();
         }
     }
 });

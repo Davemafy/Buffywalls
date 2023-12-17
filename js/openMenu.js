@@ -2,7 +2,7 @@ window.addEventListener("click", e => {
     let target = e.target;
 
     if (target.matches('#menu-btn, #menu-btn *')) {
-      openMenu() 
+      openMenu(e) 
     }
     else if (target.matches('#back, #back *')) {
       closeMenu() 
@@ -10,7 +10,8 @@ window.addEventListener("click", e => {
 });
 
 
-function openMenu() {
+function openMenu(e) {
+	 console.log(e.target)
     if (!menu && scaler) return;
 
     menu.classList.add("open");

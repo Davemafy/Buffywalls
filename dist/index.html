@@ -8,8 +8,8 @@
   
   <title>BuffyWalls</title>
   <link rel="icon" href="/assets/icon-16de1405.png" type="image/icon type" />
-  <script type="module" crossorigin src="/assets/index-23981d20.js"></script>
-  <link rel="stylesheet" href="/assets/index-c606023e.css">
+  <script type="module" crossorigin src="/assets/index-8367558f.js"></script>
+  <link rel="stylesheet" href="/assets/index-a6772ddf.css">
 </head>
 
 <body class="loading relative overflow-hidden h-screen w-screen border-2 border-lightPink grid drk:bg-lightDark drk:text-white">
@@ -19,7 +19,7 @@
       <header class=" py-6 flex border-b justify-between h-40 ">
         <a class="rounded-full aspect-square bg-indigo-900" href="#">
         </a>
-        <button id="back">
+        <button class="py-8 " id="back">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <g data-name="Layer 2">
               <g data-name="arrow-ios-back">
@@ -156,7 +156,7 @@
 			</footer>
     </aside>
     <!-- ImgModal -->
-    <div class="modal overflow-y-auto border border-lightPink px-3 transition-transform duration-[75ms]  " id="modal">
+    <div class="modal overflow-y-auto border border-lightPink px-3  " id="modal">
       <header class="flex  mb-2 relative top-0 z-10 drk:bg-lightDark items-center justify-center p-2 px-6">
         <button class="w-8 left-0 absolute close" id="closeModal">
           <img src="/assets/backpink-a514f6f0.svg" alt="">
@@ -181,7 +181,7 @@
       </div>
     </div>
  		<!-- groupModal -->
-    <div class="modal overflow-y-auto border border-lightPink px-3 transition-transform duration-[75ms]   " id="groupModal">
+    <div class="modal overflow-y-auto border border-lightPink px-3   " id="groupModal">
       <header class="flex  mb-2 relative top-0 z-10 drk:bg-lightDark items-center justify-center p-2 px-6">
         <button class="w-8 left-0 absolute close" id="closeGroupModal">
           <img src="/assets/backpink-a514f6f0.svg" alt="">
@@ -194,13 +194,13 @@
     </div>
     
     <!-- fullImgModal -->
-    <div class="modal overflow-y-auto border border-lightPink transition-transform duration-[75ms] " id="fullSreenModal">
+    <div class="modal overflow-y-auto border border-lightPink " id="fullSreenModal">
       <header class="flex absolute  top-0 p-6 z-10 drk:bg-lightDark items-center justify-between w-full ">
         <button class="w-8 close" id="closeFullModal">
           <img class="invert" src="/assets/back-249926e8.svg" alt="">
         </button>
         <button class="w-8" data-locked="true">
-          <img class="invert" src="/assets/infinity-381d2385.svg" alt="infinity.svg">
+          <img class="invert" src="/assets/infinity-1b35657a.svg" alt="infinity.svg">
         </button>
       </header>
 
@@ -238,10 +238,10 @@
           	BuffyWalls
           </h1>
           <button class="nav-btn  ml-auto aspect-square hover:drop-shadow-xl" id="menu-btn">
-            <img  src="/assets/menu-deep-ea0e3e47.svg" alt="">
+            <img  src="data:image/png;base64,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" alt="">
           </button>
-          <button class="nav-btn aspect-square " data-locked="true">
-            <img class="color-icon" src="/assets/infinitypink-c5b97a3f.svg" alt="infinity.svg">
+          <button class="nav-btn p-0 aspect-square " data-locked="true">
+            <img class="color-icon" src="/assets/infinity-b57677d0.png" alt="infinity.svg">
           </button>
         </nav>
       </header>
@@ -265,7 +265,7 @@
         </div>
         <div class="border-2 border-blue-600" id="trending-sec">
           <div class="track-title flex justify-between p-6 py-2">
-            <button aria-owns="Trending">Trending Now</button>
+            <button  aria-owns="Trending">Trending Now</button>
           </div>
           <div class="img-track">
             <div class="rounded-3xl"></div>
@@ -273,91 +273,37 @@
         </div>
       </section>
     </main>
-<!--    <footer class=" fixed bottom-0 container h-16">
-      
-      <nav class="flex h-full drk:bg-lighterDark rounded-t-[2rem] p-2 px-4">
-        <ul class="flex justify-between h-full w-full">
-          <li>
-            <button class="nav-btn" id="homeBtn">
-              <img src="icons/home-2.svg" alt="icons/home-2.svg">
-            </button>
-          </li>
-          <li>
-            <button class="nav-btn" id="setupBtn">
-                <img src="icons/carousel-horizontal-filled.svg" alt="">
-             </button>
-          </li>
-          <li>
-            <button class="nav-btn translate-y-[calc(-50%_-_.5rem)] rounded-full drk:bg-lighterDark drk:shadow-lg heart" id="favBtn" data-locked="true">
-              <img src="icons/heart.svg" alt="">
-            </button>
-          </li>
-          <li>
-            <button class="nav-btn">
-              <img src="icons/layout-grid.svg" alt="grid.svg">
-            </button>
-          </li>
-          <li>
-            <button class="nav-btn">
-              <img src="icons/menu-2.svg" alt="icons/menu-2.svg ">
-            </button>
-          </li>
-        </ul>
-      </nav>
 
-    </footer>-->
-    
+
         <footer class=" bg-white drk:bg-lightDark fixed bottom-0 w-full  h-14">
       <!-- Nav Container -->
   			<nav class="flex h-full drk:bg-lighterDark rounded-t-[2rem] p-2 px-4">
 				<ul class="flex justify-between h-full w-full">
 					<li>
-						<button class="nav-btn" id="homeBtn">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-								<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-								<path d="M10 12h4v4h-4z" />
-							</svg>
+						<button class="nav-btn p-1.5 " id="homeBtn">
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAADsAAAA7AF5KHG9AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAASNJREFUWIXt17FKw1AYxfFfggoOdRPcnLq5uPgQuij1AXwCR8XRxXfo7lrBN3AQiosudXOzi4M4CHYItg4hEoJtk7RNHHrgTJd8/wPnknsv5bSNa7zhHbfYLTmrsPbxgVHGEU4XCQ5wju8/4Gm3sTZveAOdKeC077E1L3gTvQLwxH3szQof13deD3BSBpy377xuYzUvvIGbOYHTvsPmNHgTzwuAJ37Bzjj4gdn6zutPtLLwMwwrgCce4iKBH1YIzvoYujUG6Ab4wnq2k4o0CMR9BDUFGIU1gX+1DLAMUHuAlZLfPYj/6WltKHkBKXoGdCbMKnqMD8tU0J+w9lp0WO17YBngXwSIauRHofgSWpd6IS5rDHAVip/WLTyppo4IjzhC5wcPqR4/feoLDAAAAABJRU5ErkJggg==" alt="Home">
 						</button>
 					</li>
 					<li>
-						<button class="nav-btn" id="setupBtn">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-carousel-horizontal-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M16 4h-8a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
-								<path d="M22 6a1 1 0 0 1 .117 1.993l-.117 .007h-1v8h1a1 1 0 0 1 .117 1.993l-.117 .007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-8a2 2 0 0 1 1.85 -1.995l.15 -.005h1z" stroke-width="0" fill="currentColor" />
-								<path d="M3 6a2 2 0 0 1 1.995 1.85l.005 .15v8a2 2 0 0 1 -1.85 1.995l-.15 .005h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1v-8h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" stroke-width="0" fill="currentColor" />
-							</svg>
+						<button class="nav-btn p-0.5" id="setupBtn">
+							
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAOwAAADsAEnxA+tAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAA+FJREFUeJzt2ctOFEEUxvG/KLA3BoGw4aJ7EyMmmrjQBa5wwbyEcaErFz6AC68x3uLlDViQmIhLE/UtAKMyoBGXkjBDxEWJUWJMVVPdp+nz/ZKTsOgazlR9M1NdDSIiIiIiIiIiIiIiIiIiItI0+6wb+I8JYAaYAsaBAaDPtKN4HeALsAi8AmZ//S0RhoBnwCaw1ZDaBJ4CgxnnqZFOAivYL1hZtQJMZputhpkE1rFfpLJrHTiRac4aY4hmf/J3Vhs4nGXmGuI59otSdT3JMnMNMEGzNnyx1QXGMszfrvRYNwC0gP3WTRg4QLjNNVWHAExZN2DovHUDdQjAqHUDhszfe86TwB7Cid0QsAQsR47bYO+c8OXWAfojrx0h7BlWgQXCPqIWjgCP+Ps2rpUw3nozZl2xWn+MaQMPCRtoM/3AXUKKd74pBaDcAGxXB7iNwTfoIeDtPxpSAKoNwHa9IaxJsiKbwF7C061TRf6hlOI0MEf8fuK3IgG4AZwpME7KdQq4njooNQBHgYup/0Qqc4mwKY+WGoArhJ8Aqade4HLKgJQA9ADTSe2IhQsknO+kBGD7kEfqbZiEh0wpARhJ70WMRK9VSgAOFmhEbESfCaTuAWRviF4rLapzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzCoBzKQH4UVoXklv0WqUEYK1AI2Lja+yFKQFYKdCI2GjHXpgSgAVgOb0XqVgbWIq9OCUAW8CL5HakanOEtYqSehdwE+gkjpHqdIG7KQNSA7AEPEgcI9W5R/ipjlbkHOAq8LrAOCnXO+Ba6qAiAegCLeBtgbFSjjfANLCROrDoSeAacBa4QwiE2OgAt4BzwDerJiYI+4Jlwu5zi/ANEWvLecVq/THmE3AfGE8Y/0/7dvsCO15rHBgmbBZjzww2gL6MfewlHaA/8toRYBRYBRZJC0+tfcD+U2hV7zPM367U4Wmg+SQYMn/vdQjAvHUDhl5aN1AH48Am9l/HVVcXGMswf43wFPsFqboeZZm5hhgkPMWyXpSqahkYyDJzDXICWMd+ccqu78DxTHPWOMeAj9gvUlnVJgRd/mMQeELYJFkvWK7qAo+p4dd+zpPA3MaAGWCKcKcwyN45MewAnwkndvPALDW45xcREREREREREREREREREREffgIP4GlEkDMvggAAAABJRU5ErkJggg==" alt="Setups">
 						</button>
 					</li>
 					<li>
 						<button class="nav-btn translate-y-[calc(-50%_-_.5rem)] rounded-full drk:bg-lighterDark drk:shadow-lg heart" id="favBtn" data-locked="true">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#F85D6D" fill="#F85D6D" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-							</svg>
+								<img src="/assets/heart-103d42d8.svg" alt="Favorites">
 						</button>
 					</li>
 					<li>
 						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-grid" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path fill="currentColor" d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-								<path fill="currentColor" d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-								<path fill="currentColor" d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-								<path fill="currentColor" d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-							</svg>
+								<img src="/assets/apps-593e9d25.svg" alt="Categories">
 						</button>
 					</li>
 					<li>
-						<button class="nav-btn">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M4 6l16 0" />
-								<path d="M4 12l16 0" />
-								<path d="M4 18l16 0" />
-							</svg>
+						<button class="nav-btn">					
+						<img src="/assets/menu-burger-ec514a39.svg" alt="Menu">
+
 						</button>
 					</li>
 				</ul>

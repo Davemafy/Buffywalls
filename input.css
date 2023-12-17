@@ -18,16 +18,16 @@
         @apply h-10 w-10;
     }
     .nav-btn {
-        @apply w-12 aspect-square grid  place-items-center;
+        @apply w-12 p-1.5 aspect-square grid  place-items-center;
     }
     .nav-btn img:not(.color-icon, .heart img){
     	@apply dark:invert-0;
     }
     .heart {
-        @apply w-[3.5rem] mx-auto bg-white  shadow-[0px_0px_1rem_#999];
+        @apply w-[3.5rem] p-[1.15rem] mx-auto bg-white  shadow-[0px_0px_1rem_#999];
     }
     .modal {
-        @apply bg-white  fixed z-[-1] inset-0 overflow-hidden scale-[0.8] h-full w-full;
+        @apply bg-white  fixed z-[-1] inset-0 overflow-hidden transition-transform duration-[5ms] scale-[0.9] h-full w-full;
     }
     .modal.show {
         @apply scale-100 z-10 opacity-100;
@@ -117,7 +117,7 @@ body {
 
 body:has(.modal.show) #app :is(aside, main, footer) {
     transition: 200ms ease;
-    scale: 1.06;
+    scale: 1.02;
 }
 
 #app main {
@@ -267,7 +267,7 @@ footer {
 }
 
 main .img-track {
-    grid-auto-columns: calc(100% / 3);
+    grid-auto-columns: calc(100% / 2.8);
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
     scroll-padding-inline: 0rem;
@@ -439,4 +439,8 @@ img[src=""] {
 *:not(.img-track div, #favBtn) {
     border: 0 !important;
     outlie: 1px solid red !important;
+}
+.modal , .app-name, main{
+	will-change: scale;
+	contain: paint ;
 }
