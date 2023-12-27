@@ -58,6 +58,17 @@ body {
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
+
+*{
+	scrollbar-width: auto;
+  scrollbar-color: #161315 #ffffff;
+}
+
+*::-webkit-scrollbar { 
+	width: 0.1px;
+	
+}
+
 .modal{
   scrollbar-width: auto;
   scrollbar-color: #161315 #ffffff;
@@ -254,7 +265,7 @@ footer {
 
 .img-track {
     display: grid;
-    padding: 0.15rem 1.5rem;
+    padding: 0.15rem 1.5rem 0.3rem;
     overflow-x: scroll;
     grid-auto-flow: column;
     gap: 1rem;
