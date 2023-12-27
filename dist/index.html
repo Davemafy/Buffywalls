@@ -8,19 +8,64 @@
   
   <title>BuffyWalls</title>
   <link rel="icon" href="/assets/icon-16de1405.png" type="image/icon type" />
-  <script type="module" crossorigin src="/assets/index-4c769076.js"></script>
-  <link rel="stylesheet" href="/assets/index-d3cd776e.css">
+  <script type="module" crossorigin src="/assets/index-9bae538f.js"></script>
+  <link rel="stylesheet" href="/assets/index-6d2ee0e8.css">
 </head>
 
 <body class="loading relative overflow-hidden h-screen w-screen  grid drk:bg-lightDark drk:text-white">
   <div class="bg-white drk:bg-lightDark" id="app">
+
+    <main class="grid " id="scaler">
+      <header class="flex row-span-1 justify-center items-center p-0 px-6 pr-2">
+        <nav class="flex items-center w-full lg-w-2xl gap-0">
+          <h1 class="app-name">
+          	BuffyWalls
+          </h1>
+          <button class="nav-btn  ml-auto aspect-square hover:drop-shadow-xl" id="menu-btn">
+            <img  src="data:image/png;base64,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" alt="">
+          </button>
+          <button class="nav-btn p-0 aspect-square " data-locked="true">
+            <img class="color-icon" src="/assets/infinity-b57677d0.png" alt="infinity.svg">
+          </button>
+        </nav>
+      </header>
+      <section class="font-semibold" id="content">
+        <div class="" id="newest-sec">
+          <div class="track-title flex justify-between p-6 py-2">
+            <button aria-owns="New">Newest</button>
+            <button aria-owns="New">All</button>
+          </div>
+          <div class="img-track relative">
+            <div class="rounded-3xl bg-amber-700"></div>
+          </div>
+        </div>
+        <div class="" id="category-sec">
+          <div class="track-title flex justify-between p-6 py-2">
+            <button aria-owns="Categories">Categories</button>
+          </div>
+          <div class="img-track">
+            <div class="absolute rounded-3xl"></div>
+          </div>
+        </div>
+        <div class="" id="trending-sec">
+          <div class="track-title flex justify-between p-6 py-2">
+            <button  aria-owns="Trending">Trending Now</button>
+          </div>
+          <div class="img-track">
+            <div class="rounded-3xl"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
    <aside class="absolute overflow-auto  h-[calc(100%_-_5rem)] w-2/3 top-0 left-0" id="menu">
       <!-- items -->
       <header class=" py-6 flex justify-between h-40 ">
-        <a class="rounded-full aspect-square bg-indigo-900" href="#">
+        <a class="rounded-full aspect-square overflow-hidden bg-indigo-900" href="#">
+        	<img src="/assets/icon-16de1405.png" alt="">
         </a>
-        <button class="py-8 " id="back">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <button class="py-8  " id="back">
+          <svg xmlns="http://www.w3.org/2000/svg" class=" p-2 " viewBox="0 0 24 24" fill="currentColor">
             <g data-name="Layer 2">
               <g data-name="arrow-ios-back">
                 <rect width="24" height="24" transform="rotate(90 12 12)" opacity="0" />
@@ -42,7 +87,7 @@
 					<input type="radio">
 				</li>
 				<li class="" data-locked="true">
-					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<svg xmlns="http://www.w3.org/2000/svg"  class="icon icon-tabler icon-tabler-brightness-down-filled " width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 						<path d="M12 8a4 4 0 1 1 -3.995 4.2l-.005 -.2l.005 -.2a4 4 0 0 1 3.995 -3.8z" stroke-width="0" fill="currentColor" />
 						<path d="M12 4a1 1 0 0 1 .993 .883l.007 .127a1 1 0 0 1 -1.993 .117l-.007 -.127a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
@@ -149,7 +194,7 @@
 					<img src="" alt="-icon">
 				</li>
 			</ul>
-			<footer class="h-8  relative ">
+			<footer class="h-12  relative ">
 				<p class="text-sm absolute p-2 pr-16 bottom-0 right-0">
 					Version 1.0.1
 				</p>
@@ -231,49 +276,6 @@
       </section>
     </div>
 
-    <main class="grid " id="scaler">
-      <header class="flex row-span-1 justify-center items-center p-0 px-6 pr-2">
-        <nav class="flex items-center w-full lg-w-2xl gap-0">
-          <h1 class="app-name">
-          	BuffyWalls
-          </h1>
-          <button class="nav-btn  ml-auto aspect-square hover:drop-shadow-xl" id="menu-btn">
-            <img  src="data:image/png;base64,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" alt="">
-          </button>
-          <button class="nav-btn p-0 aspect-square " data-locked="true">
-            <img class="color-icon" src="/assets/infinity-b57677d0.png" alt="infinity.svg">
-          </button>
-        </nav>
-      </header>
-      <section class="font-semibold" id="content">
-        <div class="" id="newest-sec">
-          <div class="track-title flex justify-between p-6 py-2">
-            <button aria-owns="New">Newest</button>
-            <button aria-owns="New">All</button>
-          </div>
-          <div class="img-track relative">
-            <div class="rounded-3xl bg-amber-700"></div>
-          </div>
-        </div>
-        <div class="" id="category-sec">
-          <div class="track-title flex justify-between p-6 py-2">
-            <button aria-owns="Categories">Categories</button>
-          </div>
-          <div class="img-track">
-            <div class="absolute rounded-3xl"></div>
-          </div>
-        </div>
-        <div class="" id="trending-sec">
-          <div class="track-title flex justify-between p-6 py-2">
-            <button  aria-owns="Trending">Trending Now</button>
-          </div>
-          <div class="img-track">
-            <div class="rounded-3xl"></div>
-          </div>
-        </div>
-      </section>
-    </main>
-
 
         <footer class=" bg-white drk:bg-lightDark fixed bottom-0 w-full  h-14">
       <!-- Nav Container -->
@@ -301,7 +303,7 @@
 						</button>
 					</li>
 					<li>
-						<button class="nav-btn">					
+						<button class="nav-btn drop ">					
 						<img src="/assets/menu-burger-ec514a39.svg" alt="Menu">
 
 						</button>

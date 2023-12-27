@@ -44,7 +44,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: OpenSans, sans-serif;
+  font-family: Open Sans, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -593,9 +593,22 @@ video {
 .nav-btn {
   display: grid;
   aspect-ratio: 1 / 1;
-  width: 3rem;
+  width: 2.75rem;
   place-items: center;
   padding: 0.375rem;
+}
+
+button {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+button:hover {
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -757,6 +770,10 @@ video {
 
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .h-14 {
@@ -1152,17 +1169,73 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@font-face {
-  font-family: "OpenSans";
+:root {
+  font-family: "Open Sans", Inter, system-ui, Avenir, Helvetica, Arial,
+        sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+/* open-sans-regular - latin */
+
+@font-face {
   font-display: swap;
 
-  src: url("/font/OpenSans-VariableFont_wdth,wght.ttf");
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+
+  font-family: "Open Sans";
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url("../fonts/open-sans-v40-latin-regular.woff2") format("woff2");
+
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-600 - latin */
+
+@font-face {
+  font-display: swap;
+
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+
+  font-family: "Open Sans";
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  src: url("../fonts/open-sans-v40-latin-600.woff2") format("woff2");
+
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-700 - latin */
+
+@font-face {
+  font-display: swap;
+
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+
+  font-family: "Open Sans";
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  src: url("../fonts/open-sans-v40-latin-700.woff2") format("woff2");
+
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 body {
   --thumb-cl: ;
-  font-family: OpenSans;
+  font-family: "Open Sans";
   background-repeat: no-repeat;
   background-size: 800px;
   background-position: 90% -25%;
@@ -1173,7 +1246,7 @@ body {
 
 /* Firefox */
 
-*{
+* {
   scrollbar-width: auto;
   scrollbar-color: #161315 #ffffff;
 }
@@ -1182,7 +1255,7 @@ body {
   width: 0.1px;
 }
 
-.modal{
+.modal {
   scrollbar-width: auto;
   scrollbar-color: #161315 #ffffff;
 }
@@ -1198,15 +1271,15 @@ body {
 }
 
 .modal::-webkit-scrollbar-thumb {
-  background-color: var(--thumb-cl,#161315);
+  background-color: var(--thumb-cl, #161315);
   border-radius: 10px;
 }
 
-.modal{
+.modal {
   --thumb-cl: hsl(354, 92%, 67%);
 }
 
-.modal .img-.img-track div  {
+.modal .img-.img-track div {
   border-radius: 1rem !important;
   overflow: hidden;
   background: #1111;
@@ -1237,7 +1310,7 @@ body:has(.modal.show) #app :is(aside, main, footer) {
 
 #app main {
   display: grid;
-  background: #fff ;
+  background: #fff;
   grid-template-rows: 4rem calc(100% - 4rem);
 }
 
@@ -1248,7 +1321,7 @@ footer {
 #app main > section {
   display: grid;
   gap: 0.5rem;
-  background: #fff ;
+  background: #fff;
   grid-template-rows:
         minmax(min(100%, 9rem), 1.1fr) minmax(0rem, max(15vh, 6.5rem))
         minmax(0rem, 1.1fr);
@@ -1262,13 +1335,14 @@ footer {
 }
 
 .img-track div {
-  border-radius: 1.5rem ;
-  background: url("https://doodleipsum.com/600/outline"), hsl(0, 0%, 10%, 0.045);
+  border-radius: 1.5rem;
+  background: url("https://doodleipsum.com/600/outline"),
+        hsl(0, 0%, 10%, 0.045);
   background: url("../preload/spinner.gif");
   background-position: center;
   background-repeat: no-repeat !important;
-  background-size: clamp( 2px, 70%, 70px);
-  mix-blend-mode: none ;
+  background-size: clamp(2px, 70%, 70px);
+  mix-blend-mode: none;
 }
 
 @media (min-width: 480px) {
@@ -1277,17 +1351,17 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .img-track div  {
+  .img-track div {
   }
 }
 
 @media (min-width: 978px) {
-  .img-track div  {
+  .img-track div {
   }
 }
 
 @media (min-width: 1440px) {
-  .img-track div  {
+  .img-track div {
   }
 }
 
@@ -1377,11 +1451,11 @@ main .img-track {
 
 body.loading .modal {
   display: grid;
-  grid-template-rows: auto auto 1fr ;
+  grid-template-rows: auto auto 1fr;
 }
 
 body.loading .modal .img-track {
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
 
@@ -1420,13 +1494,13 @@ body.loading .modal .img-track {
   overflow: hidden;
 }
 
-body.loading main .img-track{
+body.loading main .img-track {
   grid-template-columns: 1fr;
-  grid-template-rows:  1fr;
+  grid-template-rows: 1fr;
   height: 100%;
 }
 
-body.loading main .img-track div{
+body.loading main .img-track div {
   width: 100%;
 }
 
@@ -1436,23 +1510,28 @@ body.loading main .img-track div{
   width: 60%;
   margin-top: 2rem;
   padding-inline: 0.5rem 0;
-  translate: -100% 0%;
+  background: #fff;
+  transform: translate3d(-100%, 0, 0);
   transition: 200ms ease;
 }
 
 #app #scaler {
-  transition: 200ms ease;
+  transition: 190ms ease-in-out;
+  will-change: transform ;
+}
+
+#app #menu {
+  transition: 190ms ease-in-out;
+  will-change: transform ;
 }
 
 #app:has(.open) #scaler {
   scale: 80%;
-  translate: 50% 0%;
-  transition: 200ms ease;
+  transform: translate3d(60%, 0, 0);
 }
 
 #app:has(.open) #menu {
-  translate: 0 0;
-  transition: 200ms ease;
+  transform: translate3d(0, 0, 0);
 }
 
 @media screen and (max-width: 767px) {
@@ -1467,7 +1546,7 @@ body.loading main .img-track div{
      object-fit: cover;
   transition:
         1s,
-        scale 500ms;
+        scale 250ms;
 }
 
 .img-track img:hover {
@@ -1486,14 +1565,14 @@ body.loading main .img-track div{
   background: linear-gradient(#0001, #0001, #0003, #0009);
 }
 
-img:not(button img){
+img:not(button img) {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-main button img ,
+main button img,
 nav button:not(.heart) img {
   width: 60%;
   aspect-ratio: 1 / 1;
@@ -1513,7 +1592,7 @@ img[src=""] {
   width: 1.5rem;
   background: url("../icons/share.svg");
   background-size: cover;
-  background-position: center ;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -1522,7 +1601,7 @@ img[src=""] {
   width: 1.5rem;
   background: url("../icons/download.svg");
   background-size: cover;
-  background-position: center ;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -1530,9 +1609,11 @@ button {
   cursor: default;
 }
 
-.modal , .app-name, main{
+.modal,
+.app-name,
+main {
   will-change: scale;
-  contain: paint ;
+  contain: paint;
 }
 
 .hover\:-translate-y-1:hover {

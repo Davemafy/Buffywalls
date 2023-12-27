@@ -12,13 +12,58 @@
 
 <body class="loading relative overflow-hidden h-screen w-screen  grid drk:bg-lightDark drk:text-white">
   <div class="bg-white drk:bg-lightDark" id="app">
+
+    <main class="grid " id="scaler">
+      <header class="flex row-span-1 justify-center items-center p-0 px-6 pr-2">
+        <nav class="flex items-center w-full lg-w-2xl gap-0">
+          <h1 class="app-name">
+          	BuffyWalls
+          </h1>
+          <button class="nav-btn  ml-auto aspect-square hover:drop-shadow-xl" id="menu-btn">
+            <img  src="icons/menu.png" alt="">
+          </button>
+          <button class="nav-btn p-0 aspect-square " data-locked="true">
+            <img class="color-icon" src="icons/infinity.png" alt="infinity.svg">
+          </button>
+        </nav>
+      </header>
+      <section class="font-semibold" id="content">
+        <div class="" id="newest-sec">
+          <div class="track-title flex justify-between p-6 py-2">
+            <button aria-owns="New">Newest</button>
+            <button aria-owns="New">All</button>
+          </div>
+          <div class="img-track relative">
+            <div class="rounded-3xl bg-amber-700"></div>
+          </div>
+        </div>
+        <div class="" id="category-sec">
+          <div class="track-title flex justify-between p-6 py-2">
+            <button aria-owns="Categories">Categories</button>
+          </div>
+          <div class="img-track">
+            <div class="absolute rounded-3xl"></div>
+          </div>
+        </div>
+        <div class="" id="trending-sec">
+          <div class="track-title flex justify-between p-6 py-2">
+            <button  aria-owns="Trending">Trending Now</button>
+          </div>
+          <div class="img-track">
+            <div class="rounded-3xl"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
    <aside class="absolute overflow-auto  h-[calc(100%_-_5rem)] w-2/3 top-0 left-0" id="menu">
       <!-- items -->
       <header class=" py-6 flex justify-between h-40 ">
-        <a class="rounded-full aspect-square bg-indigo-900" href="#">
+        <a class="rounded-full aspect-square overflow-hidden bg-indigo-900" href="#">
+        	<img src="icon.png" alt="">
         </a>
-        <button class="py-8 " id="back">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <button class="py-8  " id="back">
+          <svg xmlns="http://www.w3.org/2000/svg" class=" p-2 " viewBox="0 0 24 24" fill="currentColor">
             <g data-name="Layer 2">
               <g data-name="arrow-ios-back">
                 <rect width="24" height="24" transform="rotate(90 12 12)" opacity="0" />
@@ -40,7 +85,7 @@
 					<input type="radio">
 				</li>
 				<li class="" data-locked="true">
-					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<svg xmlns="http://www.w3.org/2000/svg"  class="icon icon-tabler icon-tabler-brightness-down-filled " width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 						<path d="M12 8a4 4 0 1 1 -3.995 4.2l-.005 -.2l.005 -.2a4 4 0 0 1 3.995 -3.8z" stroke-width="0" fill="currentColor" />
 						<path d="M12 4a1 1 0 0 1 .993 .883l.007 .127a1 1 0 0 1 -1.993 .117l-.007 -.127a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
@@ -147,7 +192,7 @@
 					<img src="" alt="-icon">
 				</li>
 			</ul>
-			<footer class="h-8  relative ">
+			<footer class="h-12  relative ">
 				<p class="text-sm absolute p-2 pr-16 bottom-0 right-0">
 					Version 1.0.1
 				</p>
@@ -229,49 +274,6 @@
       </section>
     </div>
 
-    <main class="grid " id="scaler">
-      <header class="flex row-span-1 justify-center items-center p-0 px-6 pr-2">
-        <nav class="flex items-center w-full lg-w-2xl gap-0">
-          <h1 class="app-name">
-          	BuffyWalls
-          </h1>
-          <button class="nav-btn  ml-auto aspect-square hover:drop-shadow-xl" id="menu-btn">
-            <img  src="icons/menu.png" alt="">
-          </button>
-          <button class="nav-btn p-0 aspect-square " data-locked="true">
-            <img class="color-icon" src="icons/infinity.png" alt="infinity.svg">
-          </button>
-        </nav>
-      </header>
-      <section class="font-semibold" id="content">
-        <div class="" id="newest-sec">
-          <div class="track-title flex justify-between p-6 py-2">
-            <button aria-owns="New">Newest</button>
-            <button aria-owns="New">All</button>
-          </div>
-          <div class="img-track relative">
-            <div class="rounded-3xl bg-amber-700"></div>
-          </div>
-        </div>
-        <div class="" id="category-sec">
-          <div class="track-title flex justify-between p-6 py-2">
-            <button aria-owns="Categories">Categories</button>
-          </div>
-          <div class="img-track">
-            <div class="absolute rounded-3xl"></div>
-          </div>
-        </div>
-        <div class="" id="trending-sec">
-          <div class="track-title flex justify-between p-6 py-2">
-            <button  aria-owns="Trending">Trending Now</button>
-          </div>
-          <div class="img-track">
-            <div class="rounded-3xl"></div>
-          </div>
-        </div>
-      </section>
-    </main>
-
 
         <footer class=" bg-white drk:bg-lightDark fixed bottom-0 w-full  h-14">
       <!-- Nav Container -->
@@ -299,7 +301,7 @@
 						</button>
 					</li>
 					<li>
-						<button class="nav-btn">					
+						<button class="nav-btn drop ">					
 						<img src="icons/menu-burger.svg" alt="Menu">
 
 						</button>
