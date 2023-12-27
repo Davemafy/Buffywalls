@@ -57,6 +57,11 @@ body {
     height: 100dvh !important;
 }
 
+button,
+[role="button"] {
+  cursor: default;
+}
+
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -67,7 +72,7 @@ body {
 
 /* Chrome, Edge, and Safari */
 .modal::-webkit-scrollbar {
-  width: 14px;
+  width: 7px;
 }
 
 .modal::-webkit-scrollbar-track {

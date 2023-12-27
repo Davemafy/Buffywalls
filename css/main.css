@@ -385,8 +385,14 @@ textarea::placeholder {
 Set the default cursor for buttons.
 */
 
+button,
+[role="button"] {
+  cursor: pointer;
+}
 
-
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
 
 :disabled {
   cursor: default;
@@ -1167,26 +1173,31 @@ body {
   height: 100dvh !important;
 }
 
+button,
+[role="button"] {
+  cursor: default;
+}
+
 /* ===== Scrollbar CSS ===== */
 
 /* Firefox */
 
-* {
+.modal{
   scrollbar-width: auto;
   scrollbar-color: #161315 #ffffff;
 }
 
 /* Chrome, Edge, and Safari */
 
-*::-webkit-scrollbar {
+.modal::-webkit-scrollbar {
   width: 7px;
 }
 
-*::-webkit-scrollbar-track {
+.modal::-webkit-scrollbar-track {
   background: #ffffff;
 }
 
-*::-webkit-scrollbar-thumb {
+.modal::-webkit-scrollbar-thumb {
   background-color: var(--thumb-cl,#161315);
   border-radius: 10px;
 }
@@ -1369,9 +1380,6 @@ body.loading .modal {
   grid-template-rows: auto auto 1fr ;
 }
 
-body.loading .modal * {
-}
-
 body.loading .modal .img-track {
   grid-template-columns: 1fr ;
   grid-template-rows: 1fr;
@@ -1516,9 +1524,6 @@ img[src=""] {
   background-size: cover;
   background-position: center ;
   background-repeat: no-repeat;
-}
-
-*:not(.img-track div, #favBtn) {
 }
 
 .modal , .app-name, main{
