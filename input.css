@@ -35,11 +35,7 @@
     .img-track div:has(.loading){
         @apply animate-pulse ;
     }
-    #closeModal,
-    #closeFullModal,
-    #closeProModal{
-    	@apply cursor-none;
-    }
+    
 }
 
 @font-face {
@@ -57,10 +53,7 @@ body {
     height: 100dvh !important;
 }
 
-button,
-[role="button"] {
-  cursor: default;
-}
+
 
 
 /* ===== Scrollbar CSS ===== */
@@ -430,6 +423,10 @@ img[src=""] {
   background-size: cover;
   background-position: center ;
   background-repeat: no-repeat;
+}
+
+button {
+  cursor: default;
 }
 
 .modal , .app-name, main{
