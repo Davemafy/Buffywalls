@@ -11,7 +11,7 @@ window.addEventListener("click", e => {
 
 
 function openMenu(e) {
-	 console.log(e.target)
+	 
     if (!menu && scaler) return;
 
     menu.classList.add("open");

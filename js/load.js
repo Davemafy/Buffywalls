@@ -15,10 +15,9 @@ setTimeout(() => {
         .forEach(div => (div.style.opacity = "0"));
 }, 2000);
 
-document.addEventListener("DomContentLoaded", console.log("loaded"));
 
 window.addEventListener("load", e => {
-    console.log("windoe loaded");
+  //  console.log("windoe loaded");
 });
 
 function preload(limit) {
@@ -126,7 +125,7 @@ function spinner(amount, wrapper) {
                 </div>`;
             }
         }
-        console.log(wrapper.parentElement.id);
+        //console.log(wrapper.parentElement.id);
     }
 
     return divWrap;

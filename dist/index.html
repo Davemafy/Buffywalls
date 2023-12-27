@@ -8,15 +8,15 @@
   
   <title>BuffyWalls</title>
   <link rel="icon" href="/assets/icon-16de1405.png" type="image/icon type" />
-  <script type="module" crossorigin src="/assets/index-8367558f.js"></script>
-  <link rel="stylesheet" href="/assets/index-a6772ddf.css">
+  <script type="module" crossorigin src="/assets/index-a9d18d1c.js"></script>
+  <link rel="stylesheet" href="/assets/index-3a120808.css">
 </head>
 
-<body class="loading relative overflow-hidden h-screen w-screen border-2 border-lightPink grid drk:bg-lightDark drk:text-white">
+<body class="loading relative overflow-hidden h-screen w-screen  grid drk:bg-lightDark drk:text-white">
   <div class="bg-white drk:bg-lightDark" id="app">
    <aside class="absolute overflow-auto  h-[calc(100%_-_5rem)] w-2/3 top-0 left-0" id="menu">
       <!-- items -->
-      <header class=" py-6 flex border-b justify-between h-40 ">
+      <header class=" py-6 flex justify-between h-40 ">
         <a class="rounded-full aspect-square bg-indigo-900" href="#">
         </a>
         <button class="py-8 " id="back">
@@ -30,7 +30,7 @@
           </svg>
         </button>
       </header>
-	<ul class="  grid auto-rows-[minmax(3.5rem,_1fr)] text-left border-0" 5rem>
+	<ul class="  grid auto-rows-[minmax(3.5rem,_1fr)] text-left " 5rem>
 				<li class="" data-locked="false">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -156,7 +156,7 @@
 			</footer>
     </aside>
     <!-- ImgModal -->
-    <div class="modal overflow-y-auto border border-lightPink px-3  " id="modal">
+    <div class="modal overflow-y-auto  px-3  " id="modal">
       <header class="flex  mb-2 relative top-0 z-10 drk:bg-lightDark items-center justify-center p-2 px-6">
         <button class="w-8 left-0 absolute close" id="closeModal">
           <img src="/assets/backpink-a514f6f0.svg" alt="">
@@ -181,7 +181,7 @@
       </div>
     </div>
  		<!-- groupModal -->
-    <div class="modal overflow-y-auto border border-lightPink px-3   " id="groupModal">
+    <div class="modal overflow-y-auto  px-3   " id="groupModal">
       <header class="flex  mb-2 relative top-0 z-10 drk:bg-lightDark items-center justify-center p-2 px-6">
         <button class="w-8 left-0 absolute close" id="closeGroupModal">
           <img src="/assets/backpink-a514f6f0.svg" alt="">
@@ -194,7 +194,7 @@
     </div>
     
     <!-- fullImgModal -->
-    <div class="modal overflow-y-auto border border-lightPink " id="fullSreenModal">
+    <div class="modal overflow-y-auto  " id="fullSreenModal">
       <header class="flex absolute  top-0 p-6 z-10 drk:bg-lightDark items-center justify-between w-full ">
         <button class="w-8 close" id="closeFullModal">
           <img class="invert" src="/assets/back-249926e8.svg" alt="">
@@ -220,7 +220,7 @@
     </div>
     
     <!-- proModal -->
-    <div class="modal overflow-y-auto border border-lightPink transition-transform duration-[75ms]" id="proModal">
+    <div class="modal overflow-y-auto  transition-transform duration-[75ms]" id="proModal">
       <header class="flex absolute top-0 p-6 z-10 drk:bg-lightDark items-center justify-between w-full">
         <button class="w-8 close" id="closeProModal">
           <img src="/assets/backpink-a514f6f0.svg" alt="">
@@ -231,7 +231,7 @@
       </section>
     </div>
 
-    <main class="grid border-2 border-amber-300" id="scaler">
+    <main class="grid " id="scaler">
       <header class="flex row-span-1 justify-center items-center p-0 px-6 pr-2">
         <nav class="flex items-center w-full lg-w-2xl gap-0">
           <h1 class="app-name">
@@ -246,7 +246,7 @@
         </nav>
       </header>
       <section class="font-semibold" id="content">
-        <div class="border-2 border-blue-600" id="newest-sec">
+        <div class="" id="newest-sec">
           <div class="track-title flex justify-between p-6 py-2">
             <button aria-owns="New">Newest</button>
             <button aria-owns="New">All</button>
@@ -255,7 +255,7 @@
             <div class="rounded-3xl bg-amber-700"></div>
           </div>
         </div>
-        <div class="border-2 border-blue-600" id="category-sec">
+        <div class="" id="category-sec">
           <div class="track-title flex justify-between p-6 py-2">
             <button aria-owns="Categories">Categories</button>
           </div>
@@ -263,7 +263,7 @@
             <div class="absolute rounded-3xl"></div>
           </div>
         </div>
-        <div class="border-2 border-blue-600" id="trending-sec">
+        <div class="" id="trending-sec">
           <div class="track-title flex justify-between p-6 py-2">
             <button  aria-owns="Trending">Trending Now</button>
           </div>

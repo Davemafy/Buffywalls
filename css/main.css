@@ -385,14 +385,8 @@ textarea::placeholder {
 Set the default cursor for buttons.
 */
 
-button,
-[role="button"] {
-  cursor: pointer;
-}
 
-/*
-Make sure disabled buttons don't get the pointer cursor.
-*/
+
 
 :disabled {
   cursor: default;
@@ -574,14 +568,12 @@ video {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  border-width: 0px;
   padding-left: 0.5rem;
   padding-right: 1rem;
 }
 
 #menu ul li p:not(.w-min) {
   width: 100%;
-  border-width: 0px;
   font-size: 0.95rem;
   font-weight: 500;
 }
@@ -1175,10 +1167,6 @@ body {
   height: 100dvh !important;
 }
 
-.modal * {
-  border: 0px solid red;
-}
-
 /* ===== Scrollbar CSS ===== */
 
 /* Firefox */
@@ -1191,7 +1179,7 @@ body {
 /* Chrome, Edge, and Safari */
 
 *::-webkit-scrollbar {
-  width: 14px;
+  width: 7px;
 }
 
 *::-webkit-scrollbar-track {
@@ -1201,7 +1189,6 @@ body {
 *::-webkit-scrollbar-thumb {
   background-color: var(--thumb-cl,#161315);
   border-radius: 10px;
-  border: 3px solid #ffffff;
 }
 
 .modal{
@@ -1239,6 +1226,7 @@ body:has(.modal.show) #app :is(aside, main, footer) {
 
 #app main {
   display: grid;
+  background: #fff ;
   grid-template-rows: 4rem calc(100% - 4rem);
 }
 
@@ -1249,6 +1237,7 @@ footer {
 #app main > section {
   display: grid;
   gap: 0.5rem;
+  background: #fff ;
   grid-template-rows:
         minmax(min(100%, 9rem), 1.1fr) minmax(0rem, max(15vh, 6.5rem))
         minmax(0rem, 1.1fr);
@@ -1357,7 +1346,6 @@ footer {
 }
 
 .track-title {
-  border: solid red;
 }
 
 .img-track {
@@ -1382,7 +1370,6 @@ body.loading .modal {
 }
 
 body.loading .modal * {
-  border: solid 0 !important;
 }
 
 body.loading .modal .img-track {
@@ -1398,12 +1385,6 @@ body.loading .modal .img-track {
   padding-bottom: 0.2rem;
   grid-auto-rows: max(10rem, 20vh);
   grid-template-columns: repeat(2, 1fr);
-}
-
-body.loaded .modal .img-track.full:has() {
-  display: grid;
-  grid-auto-rows: auto;
-  margin: 0;
 }
 
 .modal .img-track div {
@@ -1538,8 +1519,6 @@ img[src=""] {
 }
 
 *:not(.img-track div, #favBtn) {
-  border: 0 !important;
-  outlie: 1px solid red !important;
 }
 
 .modal , .app-name, main{

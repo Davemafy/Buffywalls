@@ -8,10 +8,10 @@
     }
 
     #menu li {
-        @apply border-0 flex justify-between gap-6 px-2 pr-4 items-center;
+        @apply  flex justify-between gap-6 px-2 pr-4 items-center;
     }
     #menu ul li p:not(.w-min) {
-        @apply text-[0.95rem] font-medium border-0 w-full;
+        @apply text-[0.95rem] font-medium  w-full;
     }
     #menu svg,
     #menu ul li img {
@@ -58,31 +58,28 @@ body {
 }
 
 
-.modal * {
-    border: 0px solid red;
-}
-
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
-* {
+.modal{
   scrollbar-width: auto;
   scrollbar-color: #161315 #ffffff;
 }
 
 /* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
+.modal::-webkit-scrollbar {
   width: 14px;
 }
 
-*::-webkit-scrollbar-track {
+.modal::-webkit-scrollbar-track {
   background: #ffffff;
 }
 
-*::-webkit-scrollbar-thumb {
+.modal::-webkit-scrollbar-thumb {
 	
   background-color: var(--thumb-cl,#161315);
   border-radius: 10px;
-  border: 3px solid #ffffff;
+  
+  
 }
 
 .modal{
@@ -122,7 +119,7 @@ body:has(.modal.show) #app :is(aside, main, footer) {
 
 #app main {
     display: grid;
-
+		background: #fff ;
     grid-template-rows: 4rem calc(100% - 4rem);
 }
 
@@ -133,7 +130,7 @@ footer {
 #app main > section {
     display: grid;
     gap: 0.5rem;
-
+		background: #fff ;
     grid-template-rows:
         minmax(min(100%, 9rem), 1.1fr) minmax(0rem, max(15vh, 6.5rem))
         minmax(0rem, 1.1fr);
@@ -254,7 +251,7 @@ footer {
 }
 
 .track-title {
-    border: solid red;
+    
 }
 
 .img-track {
@@ -277,9 +274,7 @@ body.loading .modal {
 	display: grid;
 	grid-template-rows: auto auto 1fr ;
 }
-body.loading .modal * {
-	border: solid 0 !important;
-}
+
 body.loading .modal .img-track {
 	grid-template-columns: 1fr ;
 	grid-template-rows: 1fr;
@@ -298,11 +293,7 @@ body.loading .modal .img-track {
     grid-template-columns: repeat(2, 1fr);
 }
 
-body.loaded .modal .img-track.full:has() {
-	display: grid;
-	grid-auto-rows: auto;
-	margin: 0;
-}
+
 
 .modal .img-track div {
     border-radius: 1.5rem;
@@ -436,10 +427,6 @@ img[src=""] {
   background-repeat: no-repeat;
 }
 
-*:not(.img-track div, #favBtn) {
-    border: 0 !important;
-    outlie: 1px solid red !important;
-}
 .modal , .app-name, main{
 	will-change: scale;
 	contain: paint ;
