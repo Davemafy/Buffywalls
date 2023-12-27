@@ -1155,6 +1155,8 @@ video {
 @font-face {
   font-family: "OpenSans";
 
+  font-display: swap;
+
   src: url("/font/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
